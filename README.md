@@ -449,7 +449,7 @@ void showCustomModal() {
  <summary> View Code </summary>
  
 ```
-Widget _buildSavedTile(i) {
+Widget _buildSavedTile() {
     return Stack(
       children: [
         Container(
@@ -460,7 +460,7 @@ Widget _buildSavedTile(i) {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.network(
-                  data[i]['image'],
+                  'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80',
                   width: 84,
                   height: 84,
                   fit: BoxFit.cover,
@@ -475,14 +475,14 @@ Widget _buildSavedTile(i) {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      data[i]['nama'],
+                      'Pancake honey',
                       style: TextStyle(
                         fontWeight: FontWeight.w800,
                       ),
                     ),
                     SizedBox(height: 4),
                     Text(
-                      data[i]['kategori'],
+                      'Food and Beverages',
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 12,
@@ -497,13 +497,11 @@ Widget _buildSavedTile(i) {
                         ),
                         SizedBox(width: 4),
                         Text(
-                          data[i]['is_open'] == true ? 'Open Now' : 'Close Now',
+                          'Open Now',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
-                            color: data[i]['is_open'] == true
-                                ? Colors.green
-                                : Colors.red,
+                            color: Colors.green,
                           ),
                         ),
                       ],
@@ -517,7 +515,7 @@ Widget _buildSavedTile(i) {
                         ),
                         SizedBox(width: 4),
                         Text(
-                          data[i]['lokasi'],
+                          'The Breeze BSD City',
                           style: TextStyle(
                             fontSize: 12,
                           ),
@@ -530,24 +528,16 @@ Widget _buildSavedTile(i) {
             ],
           ),
         ),
-        Positioned(
+       Positioned(
           top: 24,
           right: 24,
-          child: InkWell(
-            onTap: () {
-              data.removeAt(i);
-              setState(() {});
-            },
-            borderRadius: BorderRadius.circular(50),
-            child: Image.asset(
-              'assets/images/icon/icon_saved.png',
-              width: 24,
-            ),
+          child: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.bookmarks_outlined),
           ),
         ),
       ],
     );
-  }
 ```
  
 </details>
