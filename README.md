@@ -553,131 +553,111 @@ Widget _buildSavedTile() {
  <summary> View Code </summary>
  
 ```
+Widget _buildCardBanner() {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
 
-  Widget _buildTile() {
-    // Dummy Data
-    List data = [
-      {
-        'image':
-            'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80',
-        'nama': 'Pancake honey',
-        'kategori': 'Food and Beverages',
-        'is_open': Random().nextBool(),
-        'lokasi': 'The Breeze BSD City',
-      },
-      {
-        'image':
-            'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-        'nama': 'Pizza',
-        'kategori': 'Food and Beverages',
-        'is_open': Random().nextBool(),
-        'lokasi': 'Ciledug Raya',
-      },
-    ];
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        height: height * 0.18,
+        width: double.infinity,
+        margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.grey,
+          image: DecorationImage(
+            colorFilter: new ColorFilter.mode(
+              Colors.black54,
+              BlendMode.darken,
+            ),
+            image: new NetworkImage(
+              'https://images.unsplash.com/photo-1583623025817-d180a2221d0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHN1c2hpfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
 
-    return Column(
-      children: [
-        for (var i = 0; i < data.length; i++)
-          Stack(
+        // Description
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-                child: Row(
-                  children: [
-                    // Image
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        data[i]['image'],
-                        width: 84,
-                        height: 84,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    SizedBox(width: 12),
-
-                    // Detail
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            data[i]['nama'],
-                            style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Text(
-                            data[i]['kategori'],
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 12,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.watch_later_outlined,
-                                size: 16,
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                data[i]['is_open'] == true
-                                    ? 'Open Now'
-                                    : 'Close Now',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12,
-                                  color: data[i]['is_open'] == true
-                                      ? Colors.green
-                                      : Colors.red,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on_outlined,
-                                size: 16,
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                data[i]['lokasi'],
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+              // Ticket Name
+              Text(
+                '4 Sushi Dinner',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
-              Positioned(
-                top: 24,
-                right: 24,
-                child: InkWell(
-                  onTap: () {
-                    data.removeAt(i);
-                    setState(() {});
-                  },
-                  borderRadius: BorderRadius.circular(50),
-                  child: Image.asset(
-                    'assets/images/icon/icon_saved.png',
-                    width: 24,
+
+              // Ticket Expired Date
+              Row(
+                children: [
+                  Icon(
+                    Icons.watch_later_outlined,
+                    color: Colors.white,
+                    size: 16,
                   ),
-                ),
+                  SizedBox(width: 8),
+                  Text(
+                    'Valid until ${DateFormat.yMMMMd().format(DateTime.now())}',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+              // Ticket Total
+              Row(
+                children: [
+                  Icon(
+                    Icons.theaters,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    '${Random().nextInt(10)} Ticket Available',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+
+              // Ticket Location
+              Row(
+                children: [
+                  Icon(
+                    Icons.location_on_outlined,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    'The Breeze BSD City',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-      ],
+        ),
+      ),
     );
   }
 
