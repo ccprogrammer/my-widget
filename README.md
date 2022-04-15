@@ -173,8 +173,6 @@ AppBar(
 ```
  
  </details>
- 
-
 
 <br />
 
@@ -246,8 +244,6 @@ Container(
 ```
  
 </details>
-
-<br />
 
 <br />
 
