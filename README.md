@@ -2,9 +2,9 @@
 
 <br />
 
-## # Git Template
+## # Git Template Title
 
-### 	• Git Template
+### 	• Git Template Widget
 
 <details>
  <summary> View Code </summary>
@@ -19,8 +19,7 @@
 
 ## # The Most Forgotten Code
 
-### • IconButton
-Removed extra padding
+### • IconButton no padding
 <details>
  <summary>View Code</summary>
  
@@ -38,9 +37,25 @@ Removed extra padding
  
  </details>
  
+ ### 	• TextField expanding base on text written
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Container(
+    child: TextField(               
+              expands: false,
+              maxLines: null,
+            ),
+         ),
+```
+ 
+</details>
+ 
 
 
-</br>
+<br />
 
 ## # AppBar
 
@@ -70,7 +85,7 @@ Removed extra padding
         ),
         title: Container(
           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-          width: width * 0.63,
+          width: double.infinity(),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Color(0xffF7F7F7),
@@ -92,25 +107,12 @@ Removed extra padding
           ),
         ),
         actions: [
-          cancel == false
-              ? IconButton(
+         IconButton(
                   onPressed: () {},
                   icon: Icon(
                     Icons.filter_list,
                   ),
-                )
-              : TextButton(
-                  onPressed: () {
-                    onCancel();
-                  },
-                  child: Text(
-                    'Cancel',
-                    style: TextStyle(
-                      color: Colors.red,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  )),
+                )    
           SizedBox(width: 12),
         ],
       ),
@@ -122,7 +124,47 @@ Removed extra padding
 
 <br />
 
-</br>
+<br />
+
+## # TextField
+
+### 	• Normal TextField
+![image](https://user-images.githubusercontent.com/90954993/163548481-f1ef57d1-0514-4145-95b4-f3723bbf25ce.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Container(
+          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+          width: double.infinity(),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Color(0xffF7F7F7),
+          ),
+          child: Focus(
+            onFocusChange: (focus) {
+              onSearch();
+            },
+            child: TextField(
+              style: Constants.textAppBar3,
+              decoration: InputDecoration(
+                hintText: 'Search Places',
+                hintStyle: TextStyle(
+                  color: Color(0xffB2B2B2),
+                ),
+                border: InputBorder.none,
+              ),
+            ),
+          ),
+        ),
+```
+ 
+</details>
+
+<br />
+
+<br />
 
 ## Modal
 
@@ -133,7 +175,7 @@ Removed extra padding
  <summary> View Code </summary>
  
 ```
-void shoCustomModal() {
+void showCustomModal() {
     showModalBottomSheet(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
@@ -252,7 +294,8 @@ void shoCustomModal() {
 ```
  
 </details>
-</br>
+
+<br />
 
 ## # List Tile
 
@@ -550,19 +593,3 @@ Widget _buildVouchers(i, bool isActive) {
 </details>
 
 
-</br>
-
-## # DropDown Button
-
-### 	• Normal DropDown Button
-
-<details>
- <summary> View Code </summary>
- 
-```
-
-```
- 
-</details>
-
-<br />
