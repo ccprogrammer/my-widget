@@ -119,7 +119,7 @@ Removed extra padding
  <summary> View Code </summary>
  
 ```
-void onSurveySelectLanguage() {
+void shoCustomModal() {
     showModalBottomSheet(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(
@@ -238,6 +238,8 @@ void onSurveySelectLanguage() {
 ```
  
 </details>
+
+<br />
 
 ## # List Tile
 
@@ -398,6 +400,8 @@ Widget _buildSavedTile(i) {
 ```
  
 </details>
+
+<br />
 
 ## # Card
 
