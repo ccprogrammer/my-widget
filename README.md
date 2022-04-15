@@ -436,7 +436,7 @@ void showCustomModal() {
               ],
             ),
           ),
- };
+ }
 ```
  
 </details>
