@@ -67,6 +67,7 @@ boxShadow: [
      offset: Offset(0, 0), // changes position of shadow
    )
 ```
+</details>
 
 <br />
 
