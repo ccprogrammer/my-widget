@@ -563,126 +563,135 @@ Widget _buildSavedTile(i) {
  <summary> View Code </summary>
  
 ```
-Widget _buildVouchers(i, bool isActive) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
 
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => MyVouchersDetail(
-              data: data[i],
-            ),
-          ),
-        );
+  Widget _buildTile() {
+    // Dummy Data
+    List data = [
+      {
+        'image':
+            'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80',
+        'nama': 'Pancake honey',
+        'kategori': 'Food and Beverages',
+        'is_open': Random().nextBool(),
+        'lokasi': 'The Breeze BSD City',
       },
-      child: Container(
-        height: height * 0.18,
-        width: double.infinity,
-        margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-        padding: EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: Colors.grey,
-          image: DecorationImage(
-            colorFilter: new ColorFilter.mode(
-              Colors.black54,
-              BlendMode.darken,
-            ),
-            image: new NetworkImage(
-              data[i]['image'],
-            ),
-            fit: BoxFit.cover,
-          ),
-        ),
+      {
+        'image':
+            'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Zm9vZHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+        'nama': 'Pizza',
+        'kategori': 'Food and Beverages',
+        'is_open': Random().nextBool(),
+        'lokasi': 'Ciledug Raya',
+      },
+    ];
 
-        // Description
-        child: Align(
-          alignment: Alignment.centerLeft,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
-            crossAxisAlignment: CrossAxisAlignment.start,
+    return Column(
+      children: [
+        for (var i = 0; i < data.length; i++)
+          Stack(
             children: [
-              // Ticket Name
-              Text(
-                data[i]['name'],
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w800,
+              Container(
+                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                child: Row(
+                  children: [
+                    // Image
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        data[i]['image'],
+                        width: 84,
+                        height: 84,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+
+                    // Detail
+                    Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            data[i]['nama'],
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            data[i]['kategori'],
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.watch_later_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                data[i]['is_open'] == true
+                                    ? 'Open Now'
+                                    : 'Close Now',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: data[i]['is_open'] == true
+                                      ? Colors.green
+                                      : Colors.red,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.location_on_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                data[i]['lokasi'],
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-
-              // Ticket Expired Date
-              isActive == true
-                  ? Row(
-                      children: [
-                        Icon(
-                          Icons.watch_later_outlined,
-                          color: Colors.white,
-                          size: 16,
-                        ),
-                        SizedBox(width: 8),
-                        Text(
-                          'Valid until ${data[i]['expired_date']}',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    )
-                  : Container(),
-              // Ticket Total
-              Row(
-                children: [
-                  Icon(
-                    Icons.theaters,
-                    color: Colors.white,
-                    size: 16,
+              Positioned(
+                top: 24,
+                right: 24,
+                child: InkWell(
+                  onTap: () {
+                    data.removeAt(i);
+                    setState(() {});
+                  },
+                  borderRadius: BorderRadius.circular(50),
+                  child: Image.asset(
+                    'assets/images/icon/icon_saved.png',
+                    width: 24,
                   ),
-                  SizedBox(width: 8),
-                  Text(
-                    isActive == true
-                        ? '${data[i]['total_ticket']} Ticket Available'
-                        : 'Voucher Redeemed',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-
-              // Ticket Location
-              Row(
-                children: [
-                  Icon(
-                    Icons.location_on_outlined,
-                    color: Colors.white,
-                    size: 16,
-                  ),
-                  SizedBox(width: 8),
-                  Text(
-                    data[i]['location'],
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
+                ),
               ),
             ],
           ),
-        ),
-      ),
+      ],
     );
   }
+
+
 ```
  
 </details>
