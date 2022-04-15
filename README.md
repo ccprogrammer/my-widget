@@ -122,7 +122,39 @@ Container(
  </details>
  
 
+
 <br />
+
+## # Button
+
+### 	• Normal TextButton
+![image](https://user-images.githubusercontent.com/90954993/163549133-b8770113-b5ca-4298-a365-3341a56f851a.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Container(
+                height: 48,
+                margin: EdgeInsets.fromLTRB(24, 24, 24, 24),
+                decoration: BoxDecoration(
+                  color: Colors.red,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Custom Button',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+```
+ 
+</details>
 
 <br />
 
