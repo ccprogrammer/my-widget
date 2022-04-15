@@ -98,8 +98,7 @@ AppBar(
           ),
         ),
         title: Text(
-          'AppBar Title',
-          style: Constants.textAppBar3,
+          'AppBar Title',  
         ),
         actions: [
           IconButton(
@@ -162,7 +161,6 @@ AppBar(
               onSearch();
             },
             child: TextField(
-              style: Constants.textAppBar3,
               decoration: InputDecoration(
                 hintText: 'Search Places',
                 hintStyle: TextStyle(
@@ -244,7 +242,6 @@ Container(
               onSearch();
             },
             child: TextField(
-              style: Constants.textAppBar3,
               decoration: InputDecoration(
                 hintText: 'Search Places',
                 hintStyle: TextStyle(
