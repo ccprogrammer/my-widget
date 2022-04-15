@@ -2,6 +2,7 @@
 
 <br />
 
+## # Git Template
 
 ### 	• Git Template
 
@@ -13,10 +14,12 @@
 ```
  
 </details>
- 
- ## # AppBar
- 
- ### • AppBar with TextField
+
+<br />
+
+## # Most Used
+
+### • AppBar with TextField
 ![image](https://user-images.githubusercontent.com/90954993/163541408-6b88b79d-6856-48b7-9976-bd875e88201d.png)
 
 <details>
@@ -91,8 +94,6 @@
  
  </details>
  
-## # Icon
-
 ### • IconButton
 Removed extra padding
 <details>
@@ -111,6 +112,132 @@ Removed extra padding
 ```
  
  </details>
+ 
+ ### 	• Show Modal
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+void onSurveySelectLanguage() {
+    showModalBottomSheet(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(
+          top: Radius.circular(25.0),
+        ),
+      ),
+      backgroundColor: Colors.white,
+      context: context,
+      builder: (context) => Wrap(
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              // Top Line
+              Container(
+                margin: EdgeInsets.fromLTRB(0, 12, 0, 0),
+                width: 28,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: Color(0xffE5E5E5),
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+
+              // Sheet Title
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                  child: Text(
+                    'Choose Language / Pilih Bahasa',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 18,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ),
+              ),
+              // Sheet Subtitle
+              Container(
+                margin: EdgeInsets.fromLTRB(24, 12, 24, 0),
+                child: Text(
+                  'Which language do you prefer? / Bahasa mana yang Anda sukai?',
+                  style: TextStyle(
+                    fontSize: 13,
+                  ),
+                  textAlign: TextAlign.start,
+                ),
+              ),
+              // Sheet Button 1
+              Container(
+                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                width: double.infinity,
+                height: 48,
+                child: GestureDetector(
+                  onTap: () {},        
+              
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Constants.redonesmile,
+                        width: 1,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Lanjutkan menggunakan bahasa Indonesia",
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              // Sheet Button 2
+              Container(
+                margin: EdgeInsets.fromLTRB(24, 12, 24, 24),
+                width: double.infinity,
+                height: 48,
+                child: GestureDetector(
+                  onTap: () {}, 
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Constants.redonesmile,
+                        width: 1,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        "Continue in English",
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+```
+ 
+</details>
 
 ## # List Tile
 
@@ -266,6 +393,139 @@ Widget _buildSavedTile(i) {
           ),
         ),
       ],
+    );
+  }
+```
+ 
+</details>
+
+## # Card
+
+### 	• Banner Card
+![image](https://user-images.githubusercontent.com/90954993/163542407-07413611-17a4-49ba-8630-4309a306a9e4.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Widget _buildVouchers(i, bool isActive) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MyVouchersDetail(
+              data: data[i],
+            ),
+          ),
+        );
+      },
+      child: Container(
+        height: height * 0.18,
+        width: double.infinity,
+        margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+        padding: EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: Colors.grey,
+          image: DecorationImage(
+            colorFilter: new ColorFilter.mode(
+              Colors.black54,
+              BlendMode.darken,
+            ),
+            image: new NetworkImage(
+              data[i]['image'],
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
+
+        // Description
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Ticket Name
+              Text(
+                data[i]['name'],
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+
+              // Ticket Expired Date
+              isActive == true
+                  ? Row(
+                      children: [
+                        Icon(
+                          Icons.watch_later_outlined,
+                          color: Colors.white,
+                          size: 16,
+                        ),
+                        SizedBox(width: 8),
+                        Text(
+                          'Valid until ${data[i]['expired_date']}',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    )
+                  : Container(),
+              // Ticket Total
+              Row(
+                children: [
+                  Icon(
+                    Icons.theaters,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    isActive == true
+                        ? '${data[i]['total_ticket']} Ticket Available'
+                        : 'Voucher Redeemed',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+
+              // Ticket Location
+              Row(
+                children: [
+                  Icon(
+                    Icons.location_on_outlined,
+                    color: Colors.white,
+                    size: 16,
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    data[i]['location'],
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 ```
