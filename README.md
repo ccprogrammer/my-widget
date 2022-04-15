@@ -401,7 +401,8 @@ void showCustomModal() {
  <summary>View Code</summary>
  
  ```
- Container(
+ Widget _buildRecentSearch() {
+  return Container(
             margin: EdgeInsets.fromLTRB(24, 12, 24, 0),
             child: Row(
               children: [
@@ -438,6 +439,7 @@ void showCustomModal() {
               ],
             ),
           ),
+ };
 ```
  
 </details>
