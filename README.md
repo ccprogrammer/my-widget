@@ -3,20 +3,20 @@
 <br />
 
 
-### # Git Template
+### 	• Git Template
 
 <details>
  <summary> View Code </summary>
  
 ```
-asd
+
 ```
  
 </details>
  
- ## AppBar
+ ## # AppBar
  
- ### # AppBar with TextField
+ ### • AppBar with TextField
 ![image](https://user-images.githubusercontent.com/90954993/163541408-6b88b79d-6856-48b7-9976-bd875e88201d.png)
 
 <details>
@@ -91,9 +91,9 @@ asd
  
  </details>
  
-## Icon
+## # Icon
 
-### # IconButton
+### • IconButton
 Removed extra padding
 <details>
  <summary>View Code</summary>
@@ -112,9 +112,9 @@ Removed extra padding
  
  </details>
 
-## List Tile
+## # List Tile
 
-### # Normal List Tile
+###	• Normal List Tile
 ![image](https://user-images.githubusercontent.com/90954993/163539806-b83e1040-8093-4f2a-8f85-fcf1d0f95c44.png)
 
 <details>
@@ -158,6 +158,116 @@ Removed extra padding
               ],
             ),
           ),
+```
+ 
+</details>
+
+###	• List Tile With Image
+![image](https://user-images.githubusercontent.com/90954993/163541812-53d64dde-417d-44d9-8c9c-282319a205b0.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Widget _buildSavedTile(i) {
+    return Stack(
+      children: [
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+          child: Row(
+            children: [
+              // Image
+              ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Image.network(
+                  data[i]['image'],
+                  width: 84,
+                  height: 84,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              SizedBox(width: 12),
+
+              // Detail
+              Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      data[i]['nama'],
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Text(
+                      data[i]['kategori'],
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 12,
+                      ),
+                    ),
+                    SizedBox(height: 4),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.watch_later_outlined,
+                          size: 16,
+                        ),
+                        SizedBox(width: 4),
+                        Text(
+                          data[i]['is_open'] == true ? 'Open Now' : 'Close Now',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12,
+                            color: data[i]['is_open'] == true
+                                ? Colors.green
+                                : Colors.red,
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 4),
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on_outlined,
+                          size: 16,
+                        ),
+                        SizedBox(width: 4),
+                        Text(
+                          data[i]['lokasi'],
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        Positioned(
+          top: 24,
+          right: 24,
+          child: InkWell(
+            onTap: () {
+              data.removeAt(i);
+              setState(() {});
+            },
+            borderRadius: BorderRadius.circular(50),
+            child: Image.asset(
+              'assets/images/icon/icon_saved.png',
+              width: 24,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 ```
  
 </details>
