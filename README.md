@@ -134,7 +134,7 @@ AppBar(
  
 ```
  
-      appBar: AppBar(
+      AppBar(
         iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
         elevation: 0.1,
