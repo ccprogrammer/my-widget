@@ -113,7 +113,8 @@ Removed extra padding
  
  </details>
  
- ### 	• Show Modal
+### 	• Show Modal
+![image](https://user-images.githubusercontent.com/90954993/163543428-aed38586-afc4-4872-ae94-969f33cea233.png)
 
 <details>
  <summary> View Code </summary>
@@ -536,3 +537,20 @@ Widget _buildVouchers(i, bool isActive) {
  
 </details>
 
+
+</br>
+
+## # DropDown Button
+
+### 	• Normal DropDown Button
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+```
+ 
+</details>
+
+<br />
