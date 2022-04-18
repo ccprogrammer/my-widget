@@ -1054,7 +1054,6 @@ Widget _buildReferences() {
               InkWell(
                 onTap: () {},
                 child: Container(
-                  margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
                   child: Text(
                     "See more",
                     style: TextStyle(
