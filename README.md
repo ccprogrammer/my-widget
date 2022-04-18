@@ -1030,7 +1030,7 @@ Widget _buildLocationMap() {
  <summary> View Code </summary>
  
 ```
-Widget _buildReferences() {
+ Widget _buildReferences() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1053,6 +1053,7 @@ Widget _buildReferences() {
               ),
               InkWell(
                 onTap: () {},
+                borderRadius: BorderRadius.circular(10),
                 child: Container(
                   child: Text(
                     "See more",
@@ -1067,6 +1068,7 @@ Widget _buildReferences() {
             ],
           ),
         ),
+        SizedBox(height: 8),
 
         // PLACE CARD
         Container(
@@ -1080,13 +1082,13 @@ Widget _buildReferences() {
                     margin: EdgeInsets.only(right: 20),
                     width: 160,
                     child: InkWell(
+                      borderRadius: BorderRadius.circular(10),
                       onTap: () {},
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           // Card image
                           Container(
-                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
                             height: 120,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -1106,10 +1108,10 @@ Widget _buildReferences() {
                           Container(
                             margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
                             child: Text(
-                              'Title Name',
+                              'Sushi Tei The Breeze',
                               style: TextStyle(
                                 fontSize: 14,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.bold,
                               ),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
@@ -1120,7 +1122,7 @@ Widget _buildReferences() {
                           Container(
                             margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
                             child: Text(
-                              'Category',
+                              'Food and Beverages',
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w600,
@@ -1177,35 +1179,6 @@ Widget _buildReferences() {
                               ],
                             ),
                           ),
-
-                          // Card location
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.pin_drop_outlined,
-                                    size: 16,
-                                  ),
-                                ),
-                                SizedBox(width: 4),
-                                Container(
-                                  child: Expanded(
-                                    child: Text(
-                                      'Address',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
                         ],
                       ),
                     ),
@@ -1218,6 +1191,7 @@ Widget _buildReferences() {
       ],
     );
   }
+
 ```
  
 </details>
