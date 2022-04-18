@@ -545,6 +545,34 @@ Widget _buildSavedTile() {
 
 ## # Card
 
+### 	• Card with shadow
+![image](https://user-images.githubusercontent.com/90954993/163763133-52072afd-967f-4d14-82b6-1e308e86b9f7.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Container(
+          height: 139,
+          margin: EdgeInsets.fromLTRB(24, 8, 24, 0),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                spreadRadius: 1,
+                blurRadius: 10,
+                offset: Offset(0, 0), // changes position of shadow
+              )
+            ],
+          ),
+        ),
+```
+ 
+</details>
+
+
 ### 	• Horizontal Card
 ![image](https://user-images.githubusercontent.com/90954993/163762648-868efa67-9924-4d8c-ba95-1385213111d4.png)
 
