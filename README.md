@@ -894,11 +894,10 @@ Widget _buildLocationMap() {
         ),
 
         for (var i = 0; i < 6; i++)
-
           Stack(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(24, 12, 24, 0),
+                margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
                 child: Row(
                   children: [
                     // Image
