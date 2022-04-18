@@ -1023,7 +1023,7 @@ Widget _buildLocationMap() {
 </details>
  
  ### 	• Horizontal List
-![image](https://user-images.githubusercontent.com/90954993/163767418-90fcbb54-d9dc-46f0-ae9c-2ba1537163fa.png)
+![image](https://user-images.githubusercontent.com/90954993/163770293-29cfe512-23dd-4325-8563-7bc3c0022a90.png)
 
 
 <details>
