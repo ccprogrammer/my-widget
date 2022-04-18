@@ -1223,6 +1223,7 @@ Widget _buildLocationMap() {
                   ),
                 ),
                 InkWell(
+                  borderRadius: BorderRadius.circular(10),
                   onTap: () {},
                   child: Text(
                     "See more",
