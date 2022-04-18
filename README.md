@@ -1231,7 +1231,40 @@ Widget _buildReferences() {
  <summary> View Code </summary>
  
 ```
- Container(
+ Widget _buildPhotos() {
+    return Container(
+      child: Column(
+        children: [
+          // Title / See More
+          Container(
+            margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Photos',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(
+                    "See more",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Constants.redTheme,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Container(
             margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -1256,6 +1289,10 @@ Widget _buildReferences() {
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
 ```
  
 </details>
