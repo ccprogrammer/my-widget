@@ -852,7 +852,8 @@ Widget _buildLocationMap() {
 ## # Horizontal / Vertical List
 
 ### 	• Vertical List
-![image](https://user-images.githubusercontent.com/90954993/163768899-f3f5cc92-9700-43d8-bf44-4ece475520de.png)
+![image](https://user-images.githubusercontent.com/90954993/163769986-c25d8841-bb24-4b89-82ca-5a1f259fb698.png)
+
 
 <details>
  <summary> View Code </summary>
