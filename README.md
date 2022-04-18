@@ -597,14 +597,14 @@ Container(
 </details>
 
  ### 	• Horizontal Card
-![image](https://user-images.githubusercontent.com/90954993/163766865-701930f1-e125-476f-9fb2-f9c6ec17319e.png)
+![image](https://user-images.githubusercontent.com/90954993/163767418-90fcbb54-d9dc-46f0-ae9c-2ba1537163fa.png)
+
 
 <details>
  <summary> View Code </summary>
  
 ```
-
-  Widget _buildReferences() {
+Widget _buildReferences() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -681,7 +681,7 @@ Container(
                           Container(
                             margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
                             child: Text(
-                              'Nama',
+                              'Title Name',
                               style: TextStyle(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
@@ -693,15 +693,36 @@ Container(
 
                           // Card description
                           Container(
-                            margin: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
                             child: Text(
-                              'Deskripsi',
+                              'Category',
                               style: TextStyle(
                                 fontSize: 12,
                                 fontWeight: FontWeight.w600,
                               ),
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          //  is open
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.watch_later_outlined,
+                                  size: 16,
+                                ),
+                                SizedBox(width: 4),
+                                Text(
+                                  'Open Now',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
 
@@ -747,7 +768,7 @@ Container(
                                 Container(
                                   child: Expanded(
                                     child: Text(
-                                      'Alamat',
+                                      'Address',
                                       style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w400,
