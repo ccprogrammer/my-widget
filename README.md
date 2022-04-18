@@ -930,6 +930,7 @@ Widget _buildLocationMap() {
                             'Category',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
+                              color: Color(0xff828382),
                               fontSize: 12,
                             ),
                           ),
