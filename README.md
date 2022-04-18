@@ -282,7 +282,7 @@ Container(
 
 <br />
 
-## Modal
+## # Modal
 
 ### 	• Show Modal
 ![image](https://user-images.githubusercontent.com/90954993/163543428-aed38586-afc4-4872-ae94-969f33cea233.png)
@@ -750,7 +750,7 @@ Widget _buildCardBanner() {
  
 </details>
  
- ### 	• Location Map Box
+ ### 	• Location Map Card
 ![image](https://user-images.githubusercontent.com/90954993/163765088-ad53f41e-5c2b-4dae-9cd3-335539db7756.png)
 
 <details>
