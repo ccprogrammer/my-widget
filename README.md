@@ -43,11 +43,20 @@
  <summary> View Code </summary>
  
 ```
+ if using Column
  Text(
                 'Experience the open mall for the first time and enjoy the scenery of the lake in the heart of The Breeze.',
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,            
               ),
+ 
+  if using Row
+  Expanded(
+                  child: Text(
+                    'Popular',
+                    overflow: TextOverflow.ellipsis,              
+                  ),
+                ),
 ```
  
 </details>
