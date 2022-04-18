@@ -151,7 +151,7 @@ AppBar(
         ),
         title: Container(
           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-          width: double.infinity(),
+          width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Color(0xffF7F7F7),
@@ -232,7 +232,7 @@ Container(
 ```
 Container(
           padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-          width: double.infinity(),
+          width: double.infinity,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Color(0xffF7F7F7),
