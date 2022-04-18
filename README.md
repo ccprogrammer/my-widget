@@ -546,7 +546,7 @@ Widget _buildSavedTile() {
 ## # Card
 
 ### 	• Card with shadow
-![image](https://user-images.githubusercontent.com/90954993/163763133-52072afd-967f-4d14-82b6-1e308e86b9f7.png)
+![image](https://user-images.githubusercontent.com/90954993/163763265-b10530f6-518a-4318-9355-0daf3a13a7c3.png)
 
 <details>
  <summary> View Code </summary>
