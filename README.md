@@ -37,6 +37,21 @@
  
  </details>
  
+### 	• Text Expand to bottom
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+ Text(
+                'Experience the open mall for the first time and enjoy the scenery of the lake in the heart of The Breeze.',
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,            
+              ),
+```
+ 
+</details>
+ 
  ### 	• TextField expanding base on text written
 
 <details>
