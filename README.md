@@ -898,7 +898,7 @@ Widget _buildLocationMap() {
           Stack(
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                margin: EdgeInsets.fromLTRB(24, 12, 24, 0),
                 child: Row(
                   children: [
                     // Image
