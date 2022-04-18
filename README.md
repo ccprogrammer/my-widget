@@ -466,7 +466,7 @@ void showCustomModal() {
 </details>
 
 ###	• List Tile With Image
-![image](https://user-images.githubusercontent.com/90954993/163768436-1612dd81-0752-4ec4-847d-37a1e2b20ba5.png)
+![image](https://user-images.githubusercontent.com/90954993/163768626-2b60707f-9901-4edf-a421-80a85705477a.png)
 
 
 <details>
@@ -474,7 +474,8 @@ void showCustomModal() {
  
 ```
 Widget _buildTile() {
-    return  Stack(
+    return      
+          Stack(
             children: [
               Container(
                 margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
@@ -506,7 +507,7 @@ Widget _buildTile() {
                           ),
                           SizedBox(height: 4),
                           Text(
-                            'Kategori',
+                            'Category',
                             style: TextStyle(
                               fontWeight: FontWeight.w600,
                               fontSize: 12,
@@ -539,7 +540,7 @@ Widget _buildTile() {
                               ),
                               SizedBox(width: 4),
                               Text(
-                                'Lokasi',
+                                'Location',
                                 style: TextStyle(
                                   fontSize: 12,
                                 ),
@@ -591,7 +592,7 @@ Widget _buildTile() {
                 ),
               ),
             ],
-          );
+          );      
        }
 ```
  
@@ -624,244 +625,6 @@ Container(
             ],
           ),
         ),
-```
- 
-</details>
-
- ### 	• Horizontal Card
-![image](https://user-images.githubusercontent.com/90954993/163767418-90fcbb54-d9dc-46f0-ae9c-2ba1537163fa.png)
-
-
-<details>
- <summary> View Code </summary>
- 
-```
-Widget _buildReferences() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        // TITLE / SEE MORE
-        Container(
-          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-          child: Row(
-            children: [
-              Container(
-                child: Expanded(
-                  child: Text(
-                    'Popular',
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: () {},
-                child: Container(
-                  margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
-                  child: Text(
-                    "See more",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                      color: Constants.redTheme,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-
-        // PLACE CARD
-        Container(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: [
-                SizedBox(width: 24),
-                for (int i = 0; i < 4; i++)
-                  Container(
-                    margin: EdgeInsets.only(right: 20),
-                    width: 160,
-                    child: InkWell(
-                      onTap: () {},
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          // Card image
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
-                            height: 120,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                image: NetworkImage(
-                                  'https://images.unsplash.com/photo-1648737155328-0c0012cf2f20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bWFwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-                                ),
-                                fit: BoxFit.fill,
-                                colorFilter: ColorFilter.mode(
-                                    Colors.black.withOpacity(0.3),
-                                    BlendMode.darken),
-                              ),
-                            ),
-                          ),
-
-                          // Card title
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
-                            child: Text(
-                              'Title Name',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                              ),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-
-                          // Card description
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
-                            child: Text(
-                              'Category',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w600,
-                              ),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                          //  is open
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.watch_later_outlined,
-                                  size: 16,
-                                ),
-                                SizedBox(width: 4),
-                                Text(
-                                  'Open Now',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 12,
-                                    color: Colors.green,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-
-                          // Card rating
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.star_border_outlined,
-                                    size: 16,
-                                  ),
-                                ),
-                                SizedBox(width: 4),
-                                Container(
-                                  child: Text(
-                                    "4.8 (423 ratings)",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-
-                          // Card location
-                          Container(
-                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
-                            child: Row(
-                              children: [
-                                Container(
-                                  child: Icon(
-                                    Icons.pin_drop_outlined,
-                                    size: 16,
-                                  ),
-                                ),
-                                SizedBox(width: 4),
-                                Container(
-                                  child: Expanded(
-                                    child: Text(
-                                      'Address',
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w400,
-                                      ),
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                SizedBox(width: 4),
-              ],
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-```
- 
-</details>
-
-### 	• Horizontal Card Image Only
-![image](https://user-images.githubusercontent.com/90954993/163762648-868efa67-9924-4d8c-ba95-1385213111d4.png)
-
-
-<details>
- <summary> View Code </summary>
- 
-```
- Container(
-            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  SizedBox(width: 24),
-                  for (var i = 0; i < 4; i++)
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 12, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=847&q=80',
-                          fit: BoxFit.cover,
-                          width: 120,
-                          height: 120,
-                        ),
-                      ),
-                    ),
-                  SizedBox(width: 12),
-                ],
-              ),
-            ),
-          ),
 ```
  
 </details>
@@ -1082,6 +845,419 @@ Widget _buildLocationMap() {
  
 </details>
  
+
+
+<br />
+
+## # Horizontal / Vertical List
+
+### 	• Vertical List
+![image](https://user-images.githubusercontent.com/90954993/163768899-f3f5cc92-9700-43d8-bf44-4ece475520de.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+ Widget _buildMoreReferences() {
+    return Column(
+      children: [
+        // TITLE / SEE MORE
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+          child: Row(
+            children: [
+              Container(
+                child: Expanded(
+                  child: Text(
+                    'More Places',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Text(
+                  "See more",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                    color: Constants.redTheme,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        for (var i = 0; i < 6; i++)
+
+          Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                child: Row(
+                  children: [
+                    // Image
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1567880905822-56f8e06fe630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FmZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+                        width: 84,
+                        height: 84,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+
+                    // Detail
+                    Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Title Name',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            'Category',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.watch_later_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                'Open Now',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.location_on_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                'Location',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 24,
+                right: 24,
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.star,
+                        color: Colors.yellow,
+                      ),
+                      SizedBox(width: 4),
+                      Text(
+                        '5.0',
+                        style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        '/',
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontSize: 12,
+                        ),
+                      ),
+                      Text(
+                        '5',
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+      
+      ],
+    );
+  }
+```
+ 
+</details>
+ 
+ ### 	• Horizontal List
+![image](https://user-images.githubusercontent.com/90954993/163767418-90fcbb54-d9dc-46f0-ae9c-2ba1537163fa.png)
+
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Widget _buildReferences() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // TITLE / SEE MORE
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+          child: Row(
+            children: [
+              Container(
+                child: Expanded(
+                  child: Text(
+                    'Popular',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
+                  child: Text(
+                    "See more",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Constants.redTheme,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        // PLACE CARD
+        Container(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                SizedBox(width: 24),
+                for (int i = 0; i < 4; i++)
+                  Container(
+                    margin: EdgeInsets.only(right: 20),
+                    width: 160,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Card image
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                            height: 120,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  'https://images.unsplash.com/photo-1648737155328-0c0012cf2f20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bWFwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+                                ),
+                                fit: BoxFit.fill,
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.3),
+                                    BlendMode.darken),
+                              ),
+                            ),
+                          ),
+
+                          // Card title
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                            child: Text(
+                              'Title Name',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+
+                          // Card description
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Text(
+                              'Category',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                          //  is open
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.watch_later_outlined,
+                                  size: 16,
+                                ),
+                                SizedBox(width: 4),
+                                Text(
+                                  'Open Now',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12,
+                                    color: Colors.green,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          // Card rating
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    Icons.star_border_outlined,
+                                    size: 16,
+                                  ),
+                                ),
+                                SizedBox(width: 4),
+                                Container(
+                                  child: Text(
+                                    "4.8 (423 ratings)",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          // Card location
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    Icons.pin_drop_outlined,
+                                    size: 16,
+                                  ),
+                                ),
+                                SizedBox(width: 4),
+                                Container(
+                                  child: Expanded(
+                                    child: Text(
+                                      'Address',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                SizedBox(width: 4),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+```
+ 
+</details>
+
+### 	• Horizontal List Image Only
+![image](https://user-images.githubusercontent.com/90954993/163762648-868efa67-9924-4d8c-ba95-1385213111d4.png)
+
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+ Container(
+            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 24),
+                  for (var i = 0; i < 4; i++)
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 12, 0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                          'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=847&q=80',
+                          fit: BoxFit.cover,
+                          width: 120,
+                          height: 120,
+                        ),
+                      ),
+                    ),
+                  SizedBox(width: 12),
+                ],
+              ),
+            ),
+          ),
+```
+ 
+</details>
 
 
 
