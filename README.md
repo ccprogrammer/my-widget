@@ -596,8 +596,187 @@ Container(
  
 </details>
 
+ ### 	• Horizontal Card
+![image](https://user-images.githubusercontent.com/90954993/163766865-701930f1-e125-476f-9fb2-f9c6ec17319e.png)
 
-### 	• Horizontal Card
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+  Widget _buildReferences() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // TITLE / SEE MORE
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+          child: Row(
+            children: [
+              Container(
+                child: Expanded(
+                  child: Text(
+                    'Popular',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(24, 0, 24, 0),
+                  child: Text(
+                    "See more",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w800,
+                      color: Constants.redTheme,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+
+        // PLACE CARD
+        Container(
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                SizedBox(width: 24),
+                for (int i = 0; i < 4; i++)
+                  Container(
+                    margin: EdgeInsets.only(right: 20),
+                    width: 160,
+                    child: InkWell(
+                      onTap: () {},
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Card image
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                            height: 120,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                image: NetworkImage(
+                                  'https://images.unsplash.com/photo-1648737155328-0c0012cf2f20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bWFwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+                                ),
+                                fit: BoxFit.fill,
+                                colorFilter: ColorFilter.mode(
+                                    Colors.black.withOpacity(0.3),
+                                    BlendMode.darken),
+                              ),
+                            ),
+                          ),
+
+                          // Card title
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+                            child: Text(
+                              'Nama',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w700,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+
+                          // Card description
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 2, 0, 0),
+                            child: Text(
+                              'Deskripsi',
+                              style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w600,
+                              ),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+
+                          // Card rating
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    Icons.star_border_outlined,
+                                    size: 16,
+                                  ),
+                                ),
+                                SizedBox(width: 4),
+                                Container(
+                                  child: Text(
+                                    "4.8 (423 ratings)",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+
+                          // Card location
+                          Container(
+                            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+                            child: Row(
+                              children: [
+                                Container(
+                                  child: Icon(
+                                    Icons.pin_drop_outlined,
+                                    size: 16,
+                                  ),
+                                ),
+                                SizedBox(width: 4),
+                                Container(
+                                  child: Expanded(
+                                    child: Text(
+                                      'Alamat',
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                SizedBox(width: 4),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+```
+ 
+</details>
+
+### 	• Horizontal Card Image Only
 ![image](https://user-images.githubusercontent.com/90954993/163762648-868efa67-9924-4d8c-ba95-1385213111d4.png)
 
 
@@ -849,5 +1028,7 @@ Widget _buildLocationMap() {
 ```
  
 </details>
+ 
+
 
 
