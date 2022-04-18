@@ -545,6 +545,44 @@ Widget _buildSavedTile() {
 
 ## # Card
 
+### 	• Horizontal Card
+![image](https://user-images.githubusercontent.com/90954993/163762648-868efa67-9924-4d8c-ba95-1385213111d4.png)
+
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+ Container(
+            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  SizedBox(width: 24),
+                  for (var i = 0; i < 4; i++)
+                    Container(
+                      margin: EdgeInsets.fromLTRB(0, 0, 12, 0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                          'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=847&q=80',
+                          fit: BoxFit.cover,
+                          width: 120,
+                          height: 120,
+                        ),
+                      ),
+                    ),
+                  SizedBox(width: 12),
+                ],
+              ),
+            ),
+          ),
+```
+ 
+</details>
+
+
 ### 	• Banner Card
 ![image](https://user-images.githubusercontent.com/90954993/163542407-07413611-17a4-49ba-8630-4309a306a9e4.png)
 
