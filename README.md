@@ -466,102 +466,133 @@ void showCustomModal() {
 </details>
 
 ###	• List Tile With Image
-![image](https://user-images.githubusercontent.com/90954993/163541812-53d64dde-417d-44d9-8c9c-282319a205b0.png)
+![image](https://user-images.githubusercontent.com/90954993/163768436-1612dd81-0752-4ec4-847d-37a1e2b20ba5.png)
+
 
 <details>
  <summary> View Code </summary>
  
 ```
-Widget _buildSavedTile() {
-    return Stack(
-      children: [
-        Container(
-          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-          child: Row(
+Widget _buildTile() {
+    return  Stack(
             children: [
-              // Image
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.network(
-                  'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=480&q=80',
-                  width: 84,
-                  height: 84,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              SizedBox(width: 12),
-
-              // Detail
               Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                child: Row(
                   children: [
-                    Text(
-                      'Pancake honey',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w800,
+                    // Image
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1567880905822-56f8e06fe630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FmZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+                        width: 84,
+                        height: 84,
+                        fit: BoxFit.cover,
                       ),
                     ),
-                    SizedBox(height: 4),
-                    Text(
-                      'Food and Beverages',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 12,
+                    SizedBox(width: 12),
+
+                    // Detail
+                    Container(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Title Name',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            'Kategori',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.watch_later_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                'Open Now',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.location_on_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                'Lokasi',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ),
-                    SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.watch_later_outlined,
-                          size: 16,
-                        ),
-                        SizedBox(width: 4),
-                        Text(
-                          'Open Now',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 12,
-                            color: Colors.green,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.location_on_outlined,
-                          size: 16,
-                        ),
-                        SizedBox(width: 4),
-                        Text(
-                          'The Breeze BSD City',
-                          style: TextStyle(
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 ),
               ),
+              Positioned(
+                top: 24,
+                right: 24,
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.star,
+                        color: Colors.yellow,
+                      ),
+                      SizedBox(width: 4),
+                      Text(
+                        '5.0',
+                        style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        '/',
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontSize: 12,
+                        ),
+                      ),
+                      Text(
+                        '5',
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
-          ),
-        ),
-       Positioned(
-          top: 24,
-          right: 24,
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.bookmarks_outlined),
-          ),
-        ),
-      ],
-    );
- }
+          );
+       }
 ```
  
 </details>
