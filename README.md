@@ -97,7 +97,7 @@ boxShadow: [
 
 ## # AppBar
 
-### 	• Normal Appbar
+### 	• Common Appbar
 ![image](https://user-images.githubusercontent.com/90954993/163936186-271d2f33-1046-4fd7-8fab-bdfda7361d40.png)
 
 <details>
@@ -214,7 +214,7 @@ Widget _buildAppBar() {
 
 ## # Button
 
-### 	• Normal TextButton
+### 	• Common TextButton
 ![image](https://user-images.githubusercontent.com/90954993/163549133-b8770113-b5ca-4298-a365-3341a56f851a.png)
 
 <details>
@@ -247,7 +247,7 @@ Container(
 
 ## # TextField
 
-### 	• Normal TextField
+### 	• Common TextField
 ![image](https://user-images.githubusercontent.com/90954993/163548481-f1ef57d1-0514-4145-95b4-f3723bbf25ce.png)
 
 <details>
@@ -415,7 +415,7 @@ void showCustomModal() {
 
 ## # List Tile
 
-###	• Normal List Tile
+###	• Common List Tile
 ![image](https://user-images.githubusercontent.com/90954993/163539806-b83e1040-8093-4f2a-8f85-fcf1d0f95c44.png)
 
 <details>
@@ -1275,7 +1275,7 @@ Widget _buildLocationMap() {
 
 ## # Carousel
 
-### 	• Normal Carousel
+### 	• Common Carousel
 ![image](https://user-images.githubusercontent.com/90954993/163939373-9f57a0ed-5db8-4707-aeda-ed548c0e33df.png)
 
 <details>
@@ -1298,7 +1298,7 @@ int _current = 0;
             options: CarouselOptions(
                 viewportFraction: 1.0,
                 autoPlay: true,
-                aspectRatio: 16 / 9, // Normal Aspect Ratio
+                aspectRatio: 16 / 9, // Common Aspect Ratio
                 autoPlayInterval: Duration(seconds: 5),
                 onPageChanged: (index, reason) {
                   setState(() {
@@ -1339,6 +1339,206 @@ int _current = 0;
                           : Colors.white.withOpacity(0.7),
                     ),
                   ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+```
+ 
+</details>
+
+<br />
+
+## # Detail
+
+### 	• Common Detail
+![image](https://user-images.githubusercontent.com/90954993/163943010-b98dd30d-e75d-4c4a-a94b-3b0b78dd2c20.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+  Widget _buildDetail() {
+    return Container(
+      margin: EdgeInsets.fromLTRB(24, 16, 24, 0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Places Name
+          Container(
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    'Sushi Tei The Breeze',
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w800,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(16, 0, 16, 0),
+                  child: IconButton(
+                    padding: EdgeInsets.zero,
+                    constraints: BoxConstraints(),
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.bookmarks_outlined,
+                      color: Colors.black87,
+                    ),
+                  ),
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  constraints: BoxConstraints(),
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.near_me_outlined,
+                    color: Colors.black87,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Category
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+            child: Text(
+              'Food and Beverages',
+              style: TextStyle(
+                fontWeight: FontWeight.w600,
+                fontSize: 13,
+              ),
+            ),
+          ),
+          // Rating
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.star_border_outlined,
+                  color: Colors.black87,
+                ),
+                SizedBox(width: 8),
+                Text(
+                  '4.8 (423 ratings)',
+                  style: TextStyle(
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Location
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.location_on_outlined,
+                  color: Colors.black87,
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'The Breeze BSD City',
+                    style: TextStyle(
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+                Text(
+                  'See direction',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Constants.redonesmile,
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Open Time
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.watch_later_outlined,
+                  color: Colors.black87,
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Text(
+                        'Open Now ',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 13,
+                            color: Colors.green),
+                      ),
+                      Text(
+                        'from ',
+                        style: TextStyle(
+                          fontSize: 13,
+                        ),
+                      ),
+                      Text(
+                        '10:00 - 21:00 ',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Text(
+                  'See details',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Constants.redonesmile,
+                    fontSize: 13,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          // Phone Number
+          Container(
+            margin: EdgeInsets.fromLTRB(0, 4, 0, 0),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.phone_outlined,
+                  color: Colors.black87,
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    '021-1234567',
+                    style: TextStyle(
+                      fontSize: 13,
+                    ),
+                  ),
+                ),
+                Text(
+                  'Make a call',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    color: Constants.redonesmile,
+                    fontSize: 13,
+                  ),
+                ),
               ],
             ),
           ),
