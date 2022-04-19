@@ -98,53 +98,53 @@ boxShadow: [
 ## # AppBar
 
 ### 	• Normal Appbar
-![image](https://user-images.githubusercontent.com/90954993/163549912-4d0426b9-fd43-4bc7-bab4-1677f357a616.png)
+![image](https://user-images.githubusercontent.com/90954993/163936186-271d2f33-1046-4fd7-8fab-bdfda7361d40.png)
 
 <details>
  <summary> View Code </summary>
  
 ```
-AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
-        backgroundColor: Colors.white,
-        elevation: 1,
-        titleSpacing: 0,
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          padding: EdgeInsets.zero,
-          constraints: BoxConstraints(),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.chevron_left,
-            size: 32,
-          ),
+Widget _buildAppBar() {
+    return AppBar(
+      iconTheme: IconThemeData(color: Colors.black87),
+      backgroundColor: Colors.white,
+      elevation: 1,
+      titleSpacing: 0,
+      automaticallyImplyLeading: false,
+      leading: IconButton(
+        padding: EdgeInsets.zero,
+        constraints: BoxConstraints(),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        icon: Icon(
+          Icons.chevron_left,
+          size: 32,
         ),
-        title: Text(
-          'AppBar Title',  
-        ),
-        actions: [
-          IconButton(
-              padding: EdgeInsets.zero,
-              constraints: BoxConstraints(),
-              onPressed: () {},
-              icon: Icon(Icons.search)),
-          SizedBox(width: 24),
-          IconButton(
-              padding: EdgeInsets.zero,
-              constraints: BoxConstraints(),
-              onPressed: () {},
-              icon: Icon(Icons.bookmarks_outlined)),
-          SizedBox(width: 24),
-          IconButton(
-              padding: EdgeInsets.zero,
-              constraints: BoxConstraints(),
-              onPressed: () {},
-              icon: Icon(Icons.airplane_ticket_outlined)),
-          SizedBox(width: 24),
-        ],
       ),
+      title: Text(
+        'AppBar Title',
+        style: TextStyle(
+          fontWeight: FontWeight.w700,
+          color: Colors.black,
+        ),
+      ),
+      actions: [
+        IconButton(
+            padding: EdgeInsets.zero,
+            constraints: BoxConstraints(),
+            onPressed: () {},
+            icon: Icon(Icons.search)),
+        SizedBox(width: 24),
+        IconButton(
+            padding: EdgeInsets.zero,
+            constraints: BoxConstraints(),
+            onPressed: () {},
+            icon: Icon(Icons.bookmarks_outlined)),
+        SizedBox(width: 24),
+      ],
+    );
+  }
 ```
  
 </details>
