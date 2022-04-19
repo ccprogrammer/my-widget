@@ -624,7 +624,7 @@ Widget _buildCardBanner() {
     return Container(
                     height: 140,
                     width: 348,
-                    margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                    margin: EdgeInsets.fromLTRB(24, 8, 24, 0),
                     padding: EdgeInsets.all(16),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
