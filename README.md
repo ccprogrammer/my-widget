@@ -1,22 +1,5 @@
 # My Flutter Widget
 
-<br />
-
-## # Git Template Title
-
-### 	• Git Template Widget
-
-<details>
- <summary> View Code </summary>
- 
-```
-
-```
- 
-</details>
-
-<br />
-
 ## # The Most Forgotten Code
 
 ### • IconButton no padding
@@ -1546,6 +1529,21 @@ int _current = 0;
       ),
     );
   }
+
+```
+ 
+</details>
+
+<br />
+
+## # Git Template Title
+
+### 	• Git Template Widget
+
+<details>
+ <summary> View Code </summary>
+ 
+```
 
 ```
  
