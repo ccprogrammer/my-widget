@@ -1187,67 +1187,66 @@ Widget _buildLocationMap() {
  <summary> View Code </summary>
  
 ```
- Widget _buildPhotos() {
-    return Container(
-      child: Column(
-        children: [
-          // Title / See More
-          Container(
-            margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Photos',
+
+  Widget _buildPhotos() {
+    return Column(
+      children: [
+        // Title / See More
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Photos',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
+                  color: Colors.black,
+                ),
+              ),
+              InkWell(
+                borderRadius: BorderRadius.circular(10),
+                onTap: () {},
+                child: Text(
+                  "See more",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w800,
-                    color: Colors.black,
+                    color: Constants.redTheme,
                   ),
                 ),
-                InkWell(
-                  borderRadius: BorderRadius.circular(10),
-                  onTap: () {},
-                  child: Text(
-                    "See more",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                      color: Constants.redTheme,
+              ),
+            ],
+          ),
+        ),
+
+        Container(
+          margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                SizedBox(width: 24),
+                for (var i = 0; i < 4; i++)
+                  Container(
+                    margin: EdgeInsets.fromLTRB(0, 0, 12, 0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=847&q=80',
+                        fit: BoxFit.cover,
+                        width: 120,
+                        height: 120,
+                      ),
                     ),
                   ),
-                ),
+                SizedBox(width: 12),
               ],
             ),
           ),
-
-          Container(
-            margin: EdgeInsets.fromLTRB(0, 8, 0, 0),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  SizedBox(width: 24),
-                  for (var i = 0; i < 4; i++)
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0, 0, 12, 0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=847&q=80',
-                          fit: BoxFit.cover,
-                          width: 120,
-                          height: 120,
-                        ),
-                      ),
-                    ),
-                  SizedBox(width: 12),
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 ```
