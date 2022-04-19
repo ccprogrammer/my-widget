@@ -30,7 +30,7 @@
                   onPressed: () {},
                   icon: Icon(
                     Icons.close,
-                    color: Color(0xffB2B2B2),
+                    color: Colors.black87,
                   ),
                 ),
 ```
