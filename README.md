@@ -1536,6 +1536,112 @@ int _current = 0;
 
 <br />
 
+## # Text
+
+### 	• See More Text
+![image](https://user-images.githubusercontent.com/90954993/163947902-34f756d9-397e-4b88-8f88-f848a84aabc0.png)
+ 
+![image](https://user-images.githubusercontent.com/90954993/163947942-6032eb29-bb6b-4e0e-b6d8-8ec4b3e11b64.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+class ExpandableText extends StatefulWidget {
+  const ExpandableText(
+    this.text, {
+    Key key,
+    this.trimLines = 2,
+  })  : assert(text != null),
+        super(key: key);
+
+  final String text;
+  final int trimLines;
+
+  @override
+  ExpandableTextState createState() => ExpandableTextState();
+}
+
+class ExpandableTextState extends State<ExpandableText> {
+  bool _readMore = true;
+  void _onTapLink() {
+    setState(() => _readMore = !_readMore);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final DefaultTextStyle defaultTextStyle = DefaultTextStyle.of(context);
+    final colorClickableText = Colors.red;
+    final widgetColor = Colors.black;
+    TextSpan link = TextSpan(
+        text: _readMore ? ". See more" : " See Less",
+        style: TextStyle(
+          color: colorClickableText,
+          fontWeight: FontWeight.bold,
+          fontSize: 13,
+        ),
+        recognizer: TapGestureRecognizer()..onTap = _onTapLink);
+    Widget result = LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        assert(constraints.hasBoundedWidth);
+        final double maxWidth = constraints.maxWidth;
+        // Create a TextSpan with data
+        final text = TextSpan(
+          text: widget.text,
+        );
+        // Layout and measure link
+        TextPainter textPainter = TextPainter(
+          text: link,
+          textDirection: TextDirection
+              .rtl, //better to pass this from master widget if ltr and rtl both supported
+          maxLines: widget.trimLines,
+          ellipsis: '...',
+        );
+        textPainter.layout(minWidth: constraints.minWidth, maxWidth: maxWidth);
+        final linkSize = textPainter.size;
+        // Layout and measure text
+        textPainter.text = text;
+        textPainter.layout(minWidth: constraints.minWidth, maxWidth: maxWidth);
+        final textSize = textPainter.size;
+        // Get the endIndex of data
+        int endIndex;
+        final pos = textPainter.getPositionForOffset(Offset(
+          textSize.width - linkSize.width,
+          textSize.height,
+        ));
+        endIndex = textPainter.getOffsetBefore(pos.offset);
+        var textSpan;
+        if (textPainter.didExceedMaxLines) {
+          textSpan = TextSpan(
+            text: _readMore ? widget.text.substring(0, endIndex) : widget.text,
+            style: TextStyle(
+              color: widgetColor,
+            ),
+            children: <TextSpan>[link],
+          );
+        } else {
+          textSpan = TextSpan(
+            text: widget.text,
+          );
+        }
+        return RichText(
+          softWrap: true,
+          overflow: TextOverflow.clip,
+          text: textSpan,
+        );
+      },
+    );
+    return result;
+  }
+}
+
+```
+ 
+</details>
+
+<br />
+
 ## # Git Template Title
 
 ### 	• Git Template Widget
@@ -1550,5 +1656,3 @@ int _current = 0;
 </details>
 
 <br />
-
-
