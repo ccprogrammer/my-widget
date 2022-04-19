@@ -1678,7 +1678,33 @@ class MySeparator extends StatelessWidget {
 </details>
 
 <br />
+ 
+## # Loading
 
+### 	• Shimmer
+![image](https://user-images.githubusercontent.com/90954993/163972609-25cd4374-9059-42af-ae8c-095af92715e6.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Shimmer.fromColors(
+        baseColor: Colors.grey[300],
+        highlightColor: Colors.grey[100],
+        child: Container(
+          height: height * 0.22,
+          margin: EdgeInsets.fromLTRB(24, 20, 24, 0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            color: Colors.grey,
+          ),
+        ),
+      );
+```
+ 
+</details>
+
+<br />
 ## # Git Template Title
 
 ### 	• Git Template Widget
