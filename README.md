@@ -1071,7 +1071,7 @@ Widget _buildLocationMap() {
                                 image: NetworkImage(
                                   'https://images.unsplash.com/photo-1648737155328-0c0012cf2f20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8MXx8bWFwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
                                 ),
-                                fit: BoxFit.fill,
+                                fit: BoxFit.cover,
                                 colorFilter: ColorFilter.mode(
                                     Colors.black.withOpacity(0.3),
                                     BlendMode.darken),
