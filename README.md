@@ -295,20 +295,23 @@ Container(
  
 ```
 Container(
-              margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-              child: TextField(
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.87),
-                  fontSize: 22,
-                ),
-                decoration: InputDecoration(
-                  hintText: 'Please enter your name here',
-                  hintStyle: TextStyle(
-                    color: Colors.white.withOpacity(0.67),
-                    fontSize: 16,
+              margin: EdgeInsets.fromLTRB(24.w, 26.h, 24.w, 0),
+              child: Focus(
+                onFocusChange: (focus) {},
+                child: TextField(
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.87),
+                    fontSize: 22.sp,
                   ),
-                  border: InputBorder.none,
+                  decoration: InputDecoration(
+                    hintText: 'Please enter your name here',
+                    hintStyle: TextStyle(
+                      color: Colors.white.withOpacity(0.67),
+                      fontSize: 16.sp,
+                    ),
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
             ),
