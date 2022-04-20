@@ -87,7 +87,7 @@ boxShadow: [
  <summary> View Code </summary>
  
 ```
-Widget _buildAppBar() {
+PreferredSizeWidget _buildAppBar() {
     return AppBar(
       iconTheme: IconThemeData(color: Colors.black87),
       backgroundColor: Colors.white,
