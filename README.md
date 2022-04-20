@@ -1710,6 +1710,8 @@ Shimmer.fromColors(
 
 ### 	• Common Intro Pages
 ![image](https://user-images.githubusercontent.com/90954993/164208518-be52e69c-2ff7-4355-8ad1-9f74470f5ab5.png)
+![image](https://user-images.githubusercontent.com/90954993/164209426-88a94674-7f03-40ad-bfaf-9d624c653d10.png)
+![image](https://user-images.githubusercontent.com/90954993/164209752-8ae46a51-f850-4635-a370-d850ee5dcfd9.png)
 
 <details>
  <summary> View Code </summary>
