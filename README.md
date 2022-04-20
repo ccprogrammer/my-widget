@@ -94,12 +94,13 @@ boxShadow: [
       },
     );
  
-height = .h
-width = .w
-margin/padding vertical = .h 
-margin/padding horizontal = .w
-font = .sp
-radius = .r
+add this after size number, example: height 100.h
+height .h
+width .w
+margin/padding vertical .h 
+margin/padding horizontal .w
+font .sp
+radius .r
 ```
 </details>
 
