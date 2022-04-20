@@ -1751,6 +1751,39 @@ Shimmer.fromColors(
 
 <br />
  
+ ## # Textfield
+
+### 	• Common Textfield
+![image](https://user-images.githubusercontent.com/90954993/164273703-ede4be0d-2542-4b8b-b3d3-4acc0cb0913f.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Container(
+              margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+              child: TextField(
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.87),
+                  fontSize: 22,
+                ),
+                decoration: InputDecoration(
+                  hintText: 'Please enter your name here',
+                  hintStyle: TextStyle(
+                    color: Colors.white.withOpacity(0.67),
+                    fontSize: 16,
+                  ),
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
+```
+ 
+</details>
+
+<br />
+ 
 ## # Git Template Title
 
 ### 	• Git Template Widget
