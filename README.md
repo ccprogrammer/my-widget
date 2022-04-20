@@ -1703,8 +1703,22 @@ Shimmer.fromColors(
 ```
  
 </details>
+ 
+<br />
+ 
+## # Introduction / Onboarding Pages
+
+### 	• Common Intro Pages
+
+<details>
+ <summary> View Code </summary>
+
+[INTRODUCTION PAGES](https://github.com/ccprogrammer/my-widget/blob/main/Bulk%20Widget/introduction_page.dart)
+
+</details>
 
 <br />
+ 
 ## # Git Template Title
 
 ### 	• Git Template Widget
