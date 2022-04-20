@@ -31,6 +31,21 @@ class _IntroductionPageState extends State<IntroductionPage> {
           'You can organize your daily tasks by adding your tasks into separate categories',
     ),
   ];
+  
+  
+  void nextPage() {
+    _pageBoardController.nextPage(
+      duration: Duration(microseconds: 500),
+      curve: Curves.linear,
+    );
+  }
+
+  void previousPage() {
+    _pageBoardController.previousPage(
+      duration: Duration(microseconds: 500),
+      curve: Curves.linear,
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,16 +78,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
       elevation: 0,
       automaticallyImplyLeading: false,
       title: TextButton(
-        onPressed: () {
-          // Navigator.pushAndRemoveUntil(
-          //   context,
-          //   PageTransition(
-          //     type: PageTransitionType.fade,
-          //     child: AppHome(),
-          //   ),
-          //   (route) => false,
-          // );
-        },
+        onPressed: () {},
         child: Text(
           'SKIP',
           style: TextStyle(
@@ -103,10 +109,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
                 color: Colors.white.withOpacity(0.4),
               ),
               onPressed: () {
-                _pageBoardController.previousPage(
-                  duration: Duration(microseconds: 500),
-                  curve: Curves.linear,
-                );
+                previousPage();
               },
             ),
             Spacer(),
@@ -114,10 +117,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
               width: currentPage == pages.length - 1 ? 140 : 90,
               text: currentPage == pages.length - 1 ? 'GET STARTED' : 'NEXT',
               onPressed: () {
-                _pageBoardController.nextPage(
-                  duration: Duration(microseconds: 500),
-                  curve: Curves.linear,
-                );
+                nextPage();
               },
             ),
           ],
