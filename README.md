@@ -1709,6 +1709,7 @@ Shimmer.fromColors(
 ## # Introduction / Onboarding Pages
 
 ### 	• Common Intro Pages
+![image](https://user-images.githubusercontent.com/90954993/164208518-be52e69c-2ff7-4355-8ad1-9f74470f5ab5.png)
 
 <details>
  <summary> View Code </summary>
