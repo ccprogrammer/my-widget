@@ -192,9 +192,7 @@ PreferredSizeWidget _buildAppBar() {
             color: Color(0xffF7F7F7),
           ),
           child: Focus(
-            onFocusChange: (focus) {
-              onSearch();
-            },
+            onFocusChange: (focus) {},
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search Places',
@@ -273,9 +271,7 @@ Container(
             color: Color(0xffF7F7F7),
           ),
           child: Focus(
-            onFocusChange: (focus) {
-              onSearch();
-            },
+            onFocusChange: (focus) {},
             child: TextField(
               decoration: InputDecoration(
                 hintText: 'Search Places',
