@@ -1819,7 +1819,9 @@ Material(
  </details>
  
  <br />
-
+ 
+ <br />
+ 
  ## # Git Template Title
 
 ### 	• Git Template Widget
