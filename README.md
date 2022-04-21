@@ -1785,13 +1785,18 @@ Shimmer.fromColors(
  <summary>View Code</summary>
  
  ```
-Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(50),
-                  onTap: () {},
-                ),
+ • SizedBox if the inkwell height / width doesn't match with the widget
+ SizedBox(
+              width: 60,
+              height: 60,
+            child: Material(
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(50),
+                onTap: () {},
               ),
+            ),
+          ),
  
  example: 
  Container(
