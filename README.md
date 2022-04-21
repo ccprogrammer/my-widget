@@ -1776,21 +1776,6 @@ Shimmer.fromColors(
 
 <br />
  
-## # Git Template Title
-
-### 	• Git Template Widget
-
-<details>
- <summary> View Code </summary>
- 
-```
-
-```
- 
-</details>
-
-<br />
- 
 ## # Splash Splash
  
 ### • InkWell Splash ontap image
@@ -1834,3 +1819,18 @@ Material(
  </details>
  
  <br />
+
+ ## # Git Template Title
+
+### 	• Git Template Widget
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+```
+ 
+</details>
+
+<br />
