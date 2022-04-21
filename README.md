@@ -1785,7 +1785,6 @@ Shimmer.fromColors(
  <summary>View Code</summary>
  
  ```
- • SizedBox if the inkwell height / width doesn't match with the widget
  SizedBox(
               width: 60,
               height: 60,
