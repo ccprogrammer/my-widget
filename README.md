@@ -1790,3 +1790,47 @@ Shimmer.fromColors(
 </details>
 
 <br />
+ 
+## # Splash Splash
+ 
+### • InkWell Splash ontap image
+ ![image](https://user-images.githubusercontent.com/90954993/164356331-046a608c-0ffb-4c40-b96c-edbbc4655c67.png)
+
+<details>
+ <summary>View Code</summary>
+ 
+ ```
+Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(50),
+                  onTap: () {},
+                ),
+              ),
+ 
+ example: 
+ Container(
+              margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              width: 227,
+              height: 227,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                      'https://images.unsplash.com/photo-1587207433549-7d796bccc6a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YnV0dG9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  // borderRadius: BorderRadius.circular(50),
+                  onTap: () {},
+                ),
+              ),
+            ),
+ 
+```
+ 
+ </details>
+ 
+ <br />
