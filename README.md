@@ -1824,7 +1824,50 @@ Shimmer.fromColors(
  
  <br />
  
- <br />
+ ## # Gridview
+
+### 	• Common Grid
+![image](https://user-images.githubusercontent.com/90954993/164387326-6a965d3a-bfd2-4cf8-ade8-fc08004731fc.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          crossAxisSpacing: 40,
+          mainAxisSpacing: 40,
+          // mainAxisExtent: 80,
+        ),
+        primary: false,
+        shrinkWrap: true,
+        itemCount: 9,
+        itemBuilder: (context, index) {
+          return Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  'assets/noteicon_playstation.png',
+                ),
+              ),
+            ),
+            child: SizedBox(
+              child: Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () {},
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+```
+ 
+</details>
+
+<br />
  
  ## # Git Template Title
 
