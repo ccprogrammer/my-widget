@@ -987,10 +987,14 @@ Widget _buildLocationMap() {
                                 size: 16,
                               ),
                               SizedBox(width: 4),
-                              Text(
-                                'Location',
-                                style: TextStyle(
-                                  fontSize: 12,
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.55,
+                                child: Text(
+                                  'Location',
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                  ),
                                 ),
                               ),
                             ],
