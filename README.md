@@ -455,188 +455,148 @@ void showCustomModal() {
 ## # List Tile
 
 ###	• Common List Tile
-![image](https://user-images.githubusercontent.com/90954993/163539806-b83e1040-8093-4f2a-8f85-fcf1d0f95c44.png)
+![image](https://user-images.githubusercontent.com/90954993/164884412-177558f0-a8e5-40b1-ba3e-2d19f3527107.png)
 
 <details>
  <summary>View Code</summary>
  
  ```
  Widget _buildRecentSearch() {
-  return Container(
-            margin: EdgeInsets.fromLTRB(24, 12, 24, 0),
-            child: Row(
+  return    
+          InkWell(
+            onTap: () {},
+            child: Stack(
               children: [
-                Icon(
-                  Icons.watch_later_outlined,
-                  color: Color(0xffB2B2B2),
-                ),
-                SizedBox(width: 16),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Sushi Tei The Breeze',
-                      style: TextStyle(fontWeight: FontWeight.w600),
-                    ),
-                    Text(
-                      'Food & Beverages - The Breeze BSD City',
-                      style: TextStyle(
-                        fontSize: 12,
-                      ),
-                    ),
-                  ],
-                ),
-                Spacer(),
-                IconButton(
-                  padding: EdgeInsets.zero,
-                  constraints: BoxConstraints(),
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.close,
-                    color: Color(0xffB2B2B2),
-                  ),
-                ),
-              ],
-            ),
-          ),
- }
-```
- 
-</details>
-
-###	• List Tile With Image
-![image](https://user-images.githubusercontent.com/90954993/163768626-2b60707f-9901-4edf-a421-80a85705477a.png)
-
-
-<details>
- <summary> View Code </summary>
- 
-```
-Widget _buildTile() {
-    return      
-          Stack(
-            children: [
-              Container(
-                margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-                child: Row(
-                  children: [
-                    // Image
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1567880905822-56f8e06fe630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FmZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-                        width: 84,
-                        height: 84,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    SizedBox(width: 12),
-
-                    // Detail
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Title Name',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Text(
-                            'Category',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 12,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.watch_later_outlined,
-                                size: 16,
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                'Open Now',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12,
-                                  color: Colors.green,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on_outlined,
-                                size: 16,
-                              ),
-                              SizedBox(width: 4),
-                              Container(
-                                width: MediaQuery.of(context).size.width * 0.55,
-                                child: Text(
-                                  'Location',
-                                  maxLines: 1,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 24,
-                right: 24,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+                Container(
+                  margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.yellow,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        '5.0',
-                        style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '/',
-                        style: TextStyle(
-                          color: Constants.redonesmile,
-                          fontSize: 12,
+                      // Image
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                          'https://images.unsplash.com/photo-1549877452-9c387954fbc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGxhY2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+                          width: 84,
+                          height: 84,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Text(
-                        '5',
-                        style: TextStyle(
-                          color: Constants.redonesmile,
-                          fontSize: 12,
+                      SizedBox(width: 12),
+
+                      // Detail
+                      Expanded(
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // nama
+                              Text(
+                                'Store Name',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+
+                              // kategori
+                              Text(
+                                'Category',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+
+                              // status buka
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.watch_later_outlined,
+                                    size: 16,
+                                  ),
+                                  SizedBox(width: 4),
+                                  Text(
+                                    'Open Status',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 4),
+
+                              // alamat
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on_outlined,
+                                    size: 16,
+                                  ),
+                                  SizedBox(width: 4),
+                                  Expanded(
+                                    child: Text(
+                                      'Location',
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ],
-          );      
-       }
+                Positioned(
+                  top: 24,
+                  right: 24,
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                        ),
+                        SizedBox(width: 4),
+                        Text(
+                          '5.0',
+                          style: TextStyle(
+                              color: Constants.redonesmile,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '/',
+                          style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          '5',
+                          style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+ }
 ```
  
 </details>
@@ -887,7 +847,7 @@ Widget _buildLocationMap() {
 ## # Horizontal / Vertical List
 
 ### 	• Vertical List
-![image](https://user-images.githubusercontent.com/90954993/163769986-c25d8841-bb24-4b89-82ca-5a1f259fb698.png)
+![image](https://user-images.githubusercontent.com/90954993/164884385-997fabb8-758a-48d6-8eaa-20f40b7ec34e.png)
 
 
 <details>
@@ -929,133 +889,140 @@ Widget _buildLocationMap() {
           ),
         ),
 
-        for (var i = 0; i < 6; i++)
-          Stack(
-            children: [
-              Container(
-                margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                child: Row(
-                  children: [
-                    // Image
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Image.network(
-                        'https://images.unsplash.com/photo-1567880905822-56f8e06fe630?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2FmZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
-                        width: 84,
-                        height: 84,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    SizedBox(width: 12),
-
-                    // Detail
-                    Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Title Name',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Text(
-                            'Category',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w600,
-                              color: Color(0xff828382),
-                              fontSize: 12,
-                            ),
-                          ),
-                          SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.watch_later_outlined,
-                                size: 16,
-                              ),
-                              SizedBox(width: 4),
-                              Text(
-                                'Open Now',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12,
-                                  color: Colors.green,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(height: 4),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.location_on_outlined,
-                                size: 16,
-                              ),
-                              SizedBox(width: 4),
-                              Container(
-                                width: MediaQuery.of(context).size.width * 0.55,
-                                child: Text(
-                                  'Location',
-                                  maxLines: 1,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 24,
-                right: 24,
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+        for (var i = 0; i < 5; i++)
+          InkWell(
+            onTap: () {},
+            child: Stack(
+              children: [
+                Container(
+                  margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.yellow,
-                      ),
-                      SizedBox(width: 4),
-                      Text(
-                        '5.0',
-                        style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '/',
-                        style: TextStyle(
-                          color: Constants.redonesmile,
-                          fontSize: 12,
+                      // Image
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.network(
+                          'https://images.unsplash.com/photo-1549877452-9c387954fbc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGxhY2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+                          width: 84,
+                          height: 84,
+                          fit: BoxFit.cover,
                         ),
                       ),
-                      Text(
-                        '5',
-                        style: TextStyle(
-                          color: Constants.redonesmile,
-                          fontSize: 12,
+                      SizedBox(width: 12),
+
+                      // Detail
+                      Expanded(
+                        child: Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              // nama
+                              Text(
+                                'Store Name',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+
+                              // kategori
+                              Text(
+                                'Category',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 12,
+                                ),
+                              ),
+                              SizedBox(height: 4),
+
+                              // status buka
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.watch_later_outlined,
+                                    size: 16,
+                                  ),
+                                  SizedBox(width: 4),
+                                  Text(
+                                    'Open Status',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12,
+                                      color: Colors.green,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 4),
+
+                              // alamat
+                              Row(
+                                children: [
+                                  Icon(
+                                    Icons.location_on_outlined,
+                                    size: 16,
+                                  ),
+                                  SizedBox(width: 4),
+                                  Expanded(
+                                    child: Text(
+                                      'Location',
+                                      maxLines: 1,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ],
-          ),
-      
-      ],
-    );
+                Positioned(
+                  top: 24,
+                  right: 24,
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.yellow,
+                        ),
+                        SizedBox(width: 4),
+                        Text(
+                          '5.0',
+                          style: TextStyle(
+                              color: Constants.redonesmile,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '/',
+                          style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          '5',
+                          style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
   }
 ```
  
