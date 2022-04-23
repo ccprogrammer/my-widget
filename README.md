@@ -232,13 +232,20 @@ PreferredSizeWidget _buildAppBar() {
 ```
 Container(
                 height: 48,
-                margin: EdgeInsets.fromLTRB(24, 24, 24, 24),
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(10),
-                ),
+                margin: EdgeInsets.fromLTRB(24, 24, 24, 24),      
                 child: TextButton(
                   onPressed: () {},
+                style: TextButton.styleFrom(
+                      backgroundColor: Colors.red,
+                      // minimumSize:Size.zero,
+                      // padding: EdgeInsets.zero,
+                      // side: BorderSide(
+                      //   color: Colors.red,
+                      // ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
                   child: Text(
                     'Custom Button',
                     style: TextStyle(
