@@ -264,25 +264,29 @@ Container(
  
 ```
 Container(
-          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-          width: double.infinity,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Color(0xffF7F7F7),
-          ),
-          child: Focus(
-            onFocusChange: (focus) {},
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Search Places',
-                hintStyle: TextStyle(
-                  color: Color(0xffB2B2B2),
-                ),
-                border: InputBorder.none,
-              ),
-            ),
-          ),
-        ),
+                    margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+                    padding: EdgeInsets.fromLTRB(16, 4, 16, 4),
+                    width: double.infinity,
+                    // height: MediaQuery.of(context).size.height * 0.065,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xffF7F7F7),
+                    ),
+                    child: Center(
+                      child: Focus(
+                        onFocusChange: (focus) {},
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: 'Search Places',
+                            hintStyle: TextStyle(
+                              color: Color(0xffB2B2B2),
+                            ),
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
 ```
  
 </details>
