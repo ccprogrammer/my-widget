@@ -484,8 +484,7 @@ void showCustomModal() {
                       SizedBox(width: 12),
 
                       // Detail
-                      Expanded(
-                        child: Container(
+                      Expanded( 
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -551,7 +550,6 @@ void showCustomModal() {
                             ],
                           ),
                         ),
-                      ),
                     ],
                   ),
                 ),
@@ -912,7 +910,6 @@ Widget _buildLocationMap() {
 
                       // Detail
                       Expanded(
-                        child: Container(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -978,7 +975,6 @@ Widget _buildLocationMap() {
                             ],
                           ),
                         ),
-                      ),
                     ],
                   ),
                 ),
