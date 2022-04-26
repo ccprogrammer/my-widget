@@ -990,173 +990,173 @@ Widget _buildLocationMap() {
  <summary> View Code </summary>
  
 ```
- Widget _buildMoreReferences() {
-    return Column(
-      children: [
-        // TITLE / SEE MORE
-        Container(
-          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
-          child: Row(
-            children: [
-              Container(
-                child: Expanded(
-                  child: Text(
-                    'More Places',
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: () {},
+  Widget _buildMoreReferences() {
+    return Column(children: [
+      // TITLE / SEE MORE
+      Container(
+        margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+        child: Row(
+          children: [
+            Container(
+              child: Expanded(
                 child: Text(
-                  "See more",
+                  'More Places',
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w800,
-                    color: Constants.redTheme,
+                  ),
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Text(
+                "See more",
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
+                  color: Constants.redTheme,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+
+      for (var i = 0; i < 5; i++)
+        InkWell(
+          onTap: () {},
+          child: Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
+                child: Row(
+                  children: [
+                    // Image
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(10),
+                      child: Image.network(
+                        'https://images.unsplash.com/photo-1549877452-9c387954fbc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGxhY2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+                        width: 84,
+                        height: 84,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    SizedBox(width: 12),
+
+                    // Detail
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          // nama
+                          Text(
+                            'Store Name',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+
+                          // kategori
+                          Text(
+                            'Category',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+
+                          // status buka
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.watch_later_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                'Open Status',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                  color: Colors.green,
+                                ),
+                              ),
+                            ],
+                          ),
+                          SizedBox(height: 4),
+
+                          // alamat
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.location_on_outlined,
+                                size: 16,
+                              ),
+                              SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  'Location',
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Positioned(
+                top: 24,
+                right: 24,
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.star,
+                        color: Colors.yellow,
+                      ),
+                      SizedBox(width: 4),
+                      Text(
+                        '5.0',
+                        style: TextStyle(
+                            color: Constants.redonesmile,
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        '/',
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontSize: 12,
+                        ),
+                      ),
+                      Text(
+                        '5',
+                        style: TextStyle(
+                          color: Constants.redonesmile,
+                          fontSize: 12,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ],
           ),
-        ),
-
-        for (var i = 0; i < 5; i++)
-          InkWell(
-            onTap: () {},
-            child: Stack(
-              children: [
-                Container(
-                  margin: EdgeInsets.fromLTRB(24, 12, 24, 12),
-                  child: Row(
-                    children: [
-                      // Image
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.network(
-                          'https://images.unsplash.com/photo-1549877452-9c387954fbc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGxhY2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-                          width: 84,
-                          height: 84,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      SizedBox(width: 12),
-
-                      // Detail
-                      Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              // nama
-                              Text(
-                                'Store Name',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                              SizedBox(height: 4),
-
-                              // kategori
-                              Text(
-                                'Category',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 12,
-                                ),
-                              ),
-                              SizedBox(height: 4),
-
-                              // status buka
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.watch_later_outlined,
-                                    size: 16,
-                                  ),
-                                  SizedBox(width: 4),
-                                  Text(
-                                    'Open Status',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12,
-                                      color: Colors.green,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 4),
-
-                              // alamat
-                              Row(
-                                children: [
-                                  Icon(
-                                    Icons.location_on_outlined,
-                                    size: 16,
-                                  ),
-                                  SizedBox(width: 4),
-                                  Expanded(
-                                    child: Text(
-                                      'Location',
-                                      maxLines: 1,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
-                Positioned(
-                  top: 24,
-                  right: 24,
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(6, 4, 6, 4),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                        ),
-                        SizedBox(width: 4),
-                        Text(
-                          '5.0',
-                          style: TextStyle(
-                              color: Constants.redonesmile,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '/',
-                          style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 12,
-                          ),
-                        ),
-                        Text(
-                          '5',
-                          style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          );
+        )
+    ]);
   }
 ```
  
