@@ -2016,17 +2016,17 @@ GridView.builder(
           return Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(
-                  'assets/noteicon_playstation.png',
+                image: NetworkImage(
+                  'https://images.unsplash.com/photo-1592840496694-26d035b52b48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cGxheXN0YXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
                 ),
               ),
             ),
-            child: SizedBox(
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  onTap: () {},
-                ),
+            child: Material(
+               color: Colors.transparent,
+               child: InkWell(
+               onTap: () {
+                 changeNoteIcon(noteIcon[index]['value']);
+               },
               ),
             ),
           );
