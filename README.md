@@ -733,9 +733,9 @@ Container(
 
           Container(
             margin: EdgeInsets.fromLTRB(0, 12, 0, 12),
-            child: MySeparator(
-              height: 1,
-              color: Color(0xffD9D9D9),
+        //    child: MySeparator(
+        //      height: 1,
+        //      color: Color(0xffD9D9D9),
             ),
           ),
 
