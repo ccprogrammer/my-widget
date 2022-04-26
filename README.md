@@ -1156,8 +1156,9 @@ Widget _buildLocationMap() {
             ],
           ),
         )
-    ]);
-  }
+    ],
+  );
+}
 ```
  
 </details>
