@@ -20,6 +20,29 @@
  
  </details>
  
+ ### • TextButton Padding
+<details>
+ <summary>View Code</summary>
+ 
+ ```
+TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  minimumSize: Size.zero,
+                  padding: EdgeInsets.fromLTRB(10, 6, 10, 6),                                    
+                ),
+                child: Text(
+                  '${recentSearches[i]['value']}',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+```
+ 
+ </details>
+ 
 ### 	• Text Expand to bottom
 
 <details>
@@ -1866,6 +1889,38 @@ Shimmer.fromColors(
           ),
         ),
       );
+```
+ 
+</details>
+ 
+### 	• Cached Image Network
+Image loading waiting data from url
+<details>
+ <summary> View Code </summary>
+ 
+```
+CachedNetworkImage(
+              imageUrl: 'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+              imageBuilder: (context, imageProvider) {
+                return Container(
+                  height: 120,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y29kZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60',
+                      ),
+                      fit: BoxFit.fill,
+                      colorFilter: ColorFilter.mode(
+                          Colors.black.withOpacity(0.3), BlendMode.darken),
+                    ),
+                  ),
+                );
+              },
+              placeholder: (context, url) =>
+                  Image.asset('assets/images/loader.gif'), // Loading icon
+              errorWidget: (context, url, error) => Icon(Icons.error),
+            ),
 ```
  
 </details>
