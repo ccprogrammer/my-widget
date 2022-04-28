@@ -596,25 +596,25 @@ void showCustomModal() {
                           color: Colors.yellow,
                         ),
                         SizedBox(width: 4),
-                        Text(
-                          '5.0',
-                          style: TextStyle(
-                              color: Constants.redonesmile,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '/',
-                          style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 12,
-                          ),
-                        ),
-                        Text(
-                          '5',
-                          style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 12,
+                         RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '5.0',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              TextSpan(
+                                text: '/5',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ],
@@ -1151,27 +1151,27 @@ Widget _buildLocationMap() {
                         color: Colors.yellow,
                       ),
                       SizedBox(width: 4),
-                      Text(
-                        '5.0',
-                        style: TextStyle(
-                            color: Constants.redonesmile,
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        '/',
-                        style: TextStyle(
-                          color: Constants.redonesmile,
-                          fontSize: 12,
+                       RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: '5.0',
+                                style: TextStyle(
+                                  color: Constants.redonesmile,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              TextSpan(
+                                text: '/5',
+                                style: TextStyle(
+                                  color: Constants.redonesmile,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                      Text(
-                        '5',
-                        style: TextStyle(
-                          color: Constants.redonesmile,
-                          fontSize: 12,
-                        ),
-                      ),
                     ],
                   ),
                 ),
