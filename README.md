@@ -20,6 +20,37 @@
  
  </details>
  
+ ### • Rich Text
+<details>
+ <summary>View Code</summary>
+ 
+ ```
+RichText(
+                                      text: TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text:
+                                                '5.0',
+                                            style: TextStyle(
+                                              color: Constants.redonesmile,
+                                              fontSize: 15,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          TextSpan(
+                                            text: '/5',
+                                            style: TextStyle(
+                                              color: Constants.redonesmile,
+                                              fontSize: 12,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+```
+ 
+ </details>
+ 
  ### • TextButton Padding
 <details>
  <summary>View Code</summary>
