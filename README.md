@@ -2221,7 +2221,7 @@ GridView.builder(
  
 </details>
  
- ### 	• Rate Box
+ ### 	• [Rate Box](https://pub.dev/packages/flutter_rating_bar)
 ![image](https://user-images.githubusercontent.com/90954993/165892229-16ef82d2-d704-40ad-9809-b6835cee56f1.png)
 
 <details>
@@ -2298,7 +2298,8 @@ GridView.builder(
   }
 
 ```
- 
+  
+</details>
  
 ### 	• Write Review Box
 ![image](https://user-images.githubusercontent.com/90954993/165892292-5544b9c4-d21e-4384-ba19-21acf78d13c1.png)
@@ -2379,8 +2380,7 @@ GridView.builder(
   }
 
 ```
- 
-</details>
+
  
 </details>
 
