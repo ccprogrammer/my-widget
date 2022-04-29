@@ -2220,6 +2220,169 @@ GridView.builder(
 ```
  
 </details>
+ 
+ ### 	• Rate Box
+![image](https://user-images.githubusercontent.com/90954993/165892229-16ef82d2-d704-40ad-9809-b6835cee56f1.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+  double rating = 0.0;
+  String ratingText = 'Choose Rating';
+  Widget _buildRateBox() {
+    return Container(
+      margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+      padding: EdgeInsets.fromLTRB(0, 16, 0, 16),
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          width: 2,
+          color: Color(0xffD9D9D9),
+        ),
+      ),
+      child: Column(
+        children: [
+          RatingBar.builder(
+            initialRating: 0,
+            minRating: 0,
+            direction: Axis.horizontal,
+            glow: false,
+            allowHalfRating: false,
+            itemCount: 5,
+            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+            updateOnDrag: true,
+            itemBuilder: (context, _) => Image.asset(
+              'assets/images/icon/new_design/star-2.png',
+              width: 38,
+              color: Colors.amber,
+            ),
+
+            // Icon(
+            //   Icons.star,
+            //   color: Colors.amber,
+            // ),
+
+            onRatingUpdate: (rating) => setState(() {
+              this.rating = rating;
+              // Pengkondisian text rating
+              if (this.rating == 0.0) {
+                ratingText = 'Choose Rating';
+              } else if (this.rating == 1.0) {
+                ratingText = 'Very Bad';
+              } else if (this.rating == 2.0) {
+                ratingText = 'Bad';
+                ;
+              } else if (this.rating == 3.0) {
+                ratingText = 'Normal';
+              } else if (this.rating == 4.0) {
+                ratingText = 'Good';
+              } else if (this.rating == 5.0) {
+                ratingText = 'Excellent!';
+              } else {}
+            }),
+          ),
+          SizedBox(height: 12),
+          Text(
+            '${this.ratingText}',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+```
+ 
+ 
+### 	• Write Review Box
+![image](https://user-images.githubusercontent.com/90954993/165892292-5544b9c4-d21e-4384-ba19-21acf78d13c1.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+  Widget _buildReviewBox() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 24, 24, 0),
+          child: Text(
+            'Write your review',
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.w800,
+              fontSize: 16,
+            ),
+          ),
+        ),
+
+        // Write review text area
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 8, 24, 0),
+          padding: EdgeInsets.fromLTRB(16, 4, 16, 4),
+          width: double.infinity,
+          constraints: BoxConstraints(
+            minHeight: 100,
+          ),
+          decoration: BoxDecoration(
+            color: Color(0xffF7F7F7),
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: TextField(
+            // controller: ratingReviewController,
+            maxLines: null,
+            onChanged: (value) {},
+            decoration: InputDecoration(
+              hintText: 'How is your overall experience?',
+              hintStyle: TextStyle(
+                color: Color(0xffB2B2B2),
+              ),
+              border: InputBorder.none,
+            ),
+          ),
+        ),
+
+        // Submit Review Button/sheet button
+        Container(
+          margin: EdgeInsets.fromLTRB(24, 14, 24, 24),
+          width: double.infinity,
+          height: 48,
+          child: GestureDetector(
+            onTap: () {},
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.redAccent,
+              ),
+              child: Center(
+                child: Text(
+                  'Submit Review',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+```
+ 
+</details>
+ 
+</details>
 
 <br />
  
