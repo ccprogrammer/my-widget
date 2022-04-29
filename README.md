@@ -2352,29 +2352,27 @@ GridView.builder(
         ),
 
         // Submit Review Button/sheet button
-        Container(
-          margin: EdgeInsets.fromLTRB(24, 14, 24, 24),
-          width: double.infinity,
-          height: 48,
-          child: GestureDetector(
-            onTap: () {},
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                color: Colors.redAccent,
-              ),
-              child: Center(
-                child: Text(
-                  'Submit Review',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+       Container(
+        margin: EdgeInsets.fromLTRB(24, 16, 24, 24),
+        width: double.infinity,
+        height: 48,
+        child: TextButton(
+          onPressed: () {},
+          style: TextButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+            backgroundColor: Colors.redAccent,
+          ),
+          child: Text(
+            'Submit Review',
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
+      ),
       ],
     );
   }
