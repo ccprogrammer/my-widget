@@ -2381,8 +2381,45 @@ GridView.builder(
 
  
 </details>
+ 
+  ## # Font Family
+
+### 	• Adding font family to assets
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+- download fonts from https://fonts.google.com/
+ 
+- add to assets/fonts folder 
+ 
+- in pubspec.yaml add this
+   fonts:
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+
+    - family: Tapestry
+      fonts:
+        - asset: assets/fonts/Lato/Tapestry-Regular.ttf
+ 
+- in Constants class/file add this (optional)
+  static String lato = 'Lato';
+  static String tapestry = 'Tapestry';
+ 
+- in widget use this 
+ TextStyle(
+                  fontFamily: 'Lato' or Constants.lato,
+                  color: Colors.white.withOpacity(0.87),
+                  fontSize: 22.sp,
+                ),
+```
+ 
+</details>
 
 <br />
+
  
  ## # Git Template Title
 
