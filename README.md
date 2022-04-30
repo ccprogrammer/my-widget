@@ -2,6 +2,9 @@
 
 ## # The Most Forgotten Code
 
+<details>
+ <summary>View Widget</summary>
+ 
 ### • IconButton no padding
 <details>
  <summary>View Code</summary>
@@ -129,34 +132,8 @@ boxShadow: [
    )
 ```
 </details>
-
-### 	• [Screen Utils](https://pub.dev/packages/flutter_screenutil) Responsive Package
-
-<details>
- <summary> View Code </summary>
  
-```
-  return ScreenUtilInit(
-      designSize: Size(375, 812), // this size is from figma design frame size
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: SplashScreen(),
-        );
-      },
-    );
- 
-add this after size number, example: height 100.h
-height .h
-width .w
-margin/padding vertical .h 
-margin/padding horizontal .w
-font .sp
-radius .r
-```
-</details>
+ </details>
 
 <br />
 
@@ -2418,6 +2395,38 @@ GridView.builder(
  
 </details>
 
+<br />
+ 
+ ## # Responsive
+ 
+ ### 	• [Screen Utils](https://pub.dev/packages/flutter_screenutil) Responsive Package
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+  return ScreenUtilInit(
+      designSize: Size(375, 812), // this size is from figma design frame size
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: SplashScreen(),
+        );
+      },
+    );
+ 
+add this after size number, example: height 100.h
+height .h
+width .w
+margin/padding vertical .h 
+margin/padding horizontal .w
+font .sp
+radius .r
+```
+</details>
+ 
 <br />
 
  
