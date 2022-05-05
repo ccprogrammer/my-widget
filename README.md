@@ -137,8 +137,14 @@ boxShadow: [
 
 <br />
 
+
+
+
 ## # AppBar
 
+<details>
+  <summary>View Widget</summary>
+ 
 ### 	• Common Appbar
 ![image](https://user-images.githubusercontent.com/90954993/163936186-271d2f33-1046-4fd7-8fab-bdfda7361d40.png)
 
@@ -249,11 +255,16 @@ PreferredSizeWidget _buildAppBar() {
 ```
  
  </details>
+ 
+</details>
 
 <br />
 
 ## # Button
 
+<details>
+  <summary>View Widget</summary>
+ 
 ### 	• Common TextButton
 ![image](https://user-images.githubusercontent.com/90954993/163549133-b8770113-b5ca-4298-a365-3341a56f851a.png)
 
@@ -289,10 +300,15 @@ Container(
 ```
  
 </details>
+ 
+ </details>
 
 <br />
 
 ## # TextField
+
+<details>
+  <summary>View Widget</summary>
 
 ### 	• Common TextField
 ![image](https://user-images.githubusercontent.com/90954993/163548481-f1ef57d1-0514-4145-95b4-f3723bbf25ce.png)
@@ -357,10 +373,16 @@ Container(
 ```
  
 </details>
+ 
+ </details>
+ 
 <br />
 
 ## # Modal
 
+<details>
+  <summary>View Widget</summary>
+ 
 ### 	• Show Modal
 ![image](https://user-images.githubusercontent.com/90954993/163543428-aed38586-afc4-4872-ae94-969f33cea233.png)
 
@@ -486,12 +508,17 @@ void showCustomModal() {
   }
 ```
  
-</details>
+ </details>
 
+</details>
+ 
 <br />
 
 ## # List Tile
 
+ <details>
+  <summary>View Widget</summary>
+  
 ###	• Common List Tile
 ![image](https://user-images.githubusercontent.com/90954993/164884412-177558f0-a8e5-40b1-ba3e-2d19f3527107.png)
 
@@ -637,10 +664,15 @@ void showCustomModal() {
  
 </details>
 
+ </details>
+ 
 <br />
 
 ## # Card
 
+<details>
+  <summary>View Widget</summary>
+ 
 ### 	• Card with shadow
 ![image](https://user-images.githubusercontent.com/90954993/163763265-b10530f6-518a-4318-9355-0daf3a13a7c3.png)
 
@@ -788,6 +820,7 @@ Container(
 ```
  
 </details>
+
 
 
 ### 	• Banner Card
@@ -1007,12 +1040,17 @@ Widget _buildLocationMap() {
  
 </details>
  
+</details>
+
 
 
 <br />
 
 ## # Horizontal / Vertical List
 
+<details>
+  <summary>View Widget</summary>
+ 
 ### 	• Vertical List
 ![image](https://user-images.githubusercontent.com/90954993/164884385-997fabb8-758a-48d6-8eaa-20f40b7ec34e.png)
 
@@ -1442,10 +1480,15 @@ Widget _buildLocationMap() {
  
 </details>
 
+ </details>
+ 
  <br />
 
 ## # Carousel
 
+ <details>
+  <summary>View Widget</summary>
+  
 ### 	• Common Carousel
 ![image](https://user-images.githubusercontent.com/90954993/163939373-9f57a0ed-5db8-4707-aeda-ed548c0e33df.png)
 
@@ -1721,11 +1764,16 @@ int _current = 0;
 ```
  
 </details>
+ 
+</details>
 
 <br />
 
 ## # Text
 
+  <details>
+  <summary>View Widget</summary>
+   
 ### 	• See More Text
 ![image](https://user-images.githubusercontent.com/90954993/163947902-34f756d9-397e-4b88-8f88-f848a84aabc0.png)
  
@@ -1827,10 +1875,16 @@ class ExpandableTextState extends State<ExpandableText> {
 ```
  
 </details>
+ 
+ </details>
 
 <br />
  
  ## # Divider
+ 
+ <details>
+  <summary>View Widget</summary>
+  
 
 ### 	• Dot Line
 ![image](https://user-images.githubusercontent.com/90954993/163966857-e745d208-70db-42b3-a843-729f85584f26.png)
@@ -1874,9 +1928,14 @@ class MySeparator extends StatelessWidget {
  
 </details>
 
+ </details>
+ 
 <br />
  
 ## # Loading
+ 
+ <details>
+  <summary>View Widget</summary>
 
 ### 	• Shimmer
 ![image](https://user-images.githubusercontent.com/90954993/163972609-25cd4374-9059-42af-ae8c-095af92715e6.png)
@@ -1932,11 +1991,16 @@ CachedNetworkImage(
 ```
  
 </details>
+  
+ </details>
  
 <br />
  
 ## # Introduction / Onboarding Pages
 
+ <details>
+  <summary>View Widget</summary>
+  
 ### 	• Common Intro Pages
 ![intro_1](https://user-images.githubusercontent.com/90954993/164210687-57f198d9-6fb5-4ff2-b789-a20888d1578c.png)
 ![intro_2](https://user-images.githubusercontent.com/90954993/164209426-88a94674-7f03-40ad-bfaf-9d624c653d10.png)
@@ -1950,10 +2014,14 @@ CachedNetworkImage(
 
 </details>
 
+ </details>
 
 <br />
  
 ## # Splash Splash
+ 
+ <details>
+  <summary>View Widget</summary>
  
 ### • InkWell Splash ontap image
  ![image](https://user-images.githubusercontent.com/90954993/164356331-046a608c-0ffb-4c40-b96c-edbbc4655c67.png)
@@ -1998,11 +2066,16 @@ CachedNetworkImage(
 ```
  
  </details>
+  
+ </details>
  
  <br />
  
  ## # Gridview
 
+ <details>
+  <summary>View Widget</summary>
+  
 ### 	• Common Grid
 ![image](https://user-images.githubusercontent.com/90954993/164387326-6a965d3a-bfd2-4cf8-ade8-fc08004731fc.png)
 
@@ -2044,9 +2117,14 @@ GridView.builder(
  
 </details>
  
+ </details>
+ 
  <br />
  
  ## # Rating & Review
+ 
+ <details>
+  <summary>View Widget</summary>
 
 ### 	• Rating & Review Box with [Rating Bar](https://pub.dev/packages/flutter_rating_bar) package
  ![image](https://user-images.githubusercontent.com/90954993/165880900-f3935fd1-943a-4cb0-ae61-012724cd0a9a.png)
@@ -2356,10 +2434,14 @@ GridView.builder(
 
 ```
 
+ </details>
  
 </details>
  
   ## # Font Family
+  
+  <details>
+  <summary>View Widget</summary>
 
 ### 	• Adding font family to assets
 
@@ -2394,10 +2476,15 @@ GridView.builder(
 ```
  
 </details>
+   
+  </details>
 
 <br />
  
  ## # Responsive
+  
+  <details>
+  <summary>View Widget</summary>
  
  ### 	• [Screen Utils](https://pub.dev/packages/flutter_screenutil) Responsive Package
 
@@ -2427,6 +2514,8 @@ radius .r
 ```
 </details>
  
+  </details>
+  
 <br />
 
  
