@@ -135,7 +135,7 @@ boxShadow: [
  
  </details>
 
-<br />
+
 
 
 
@@ -258,7 +258,7 @@ PreferredSizeWidget _buildAppBar() {
  
 </details>
 
-<br />
+
 
 ## # Button
 
@@ -303,7 +303,7 @@ Container(
  
  </details>
 
-<br />
+
 
 ## # TextField
 
@@ -376,7 +376,7 @@ Container(
  
  </details>
  
-<br />
+
 
 ## # Modal
 
@@ -512,7 +512,7 @@ void showCustomModal() {
 
 </details>
  
-<br />
+
 
 ## # List Tile
 
@@ -666,7 +666,7 @@ void showCustomModal() {
 
  </details>
  
-<br />
+
 
 ## # Card
 
@@ -1044,7 +1044,7 @@ Widget _buildLocationMap() {
 
 
 
-<br />
+
 
 ## # Horizontal / Vertical List
 
@@ -1482,7 +1482,7 @@ Widget _buildLocationMap() {
 
  </details>
  
- <br />
+ 
 
 ## # Carousel
 
@@ -1565,7 +1565,7 @@ int _current = 0;
  
 </details>
 
-<br />
+
 
 ## # Detail
 
@@ -1767,7 +1767,7 @@ int _current = 0;
  
 </details>
 
-<br />
+
 
 ## # Text
 
@@ -1878,7 +1878,7 @@ class ExpandableTextState extends State<ExpandableText> {
  
  </details>
 
-<br />
+
  
  ## # Divider
  
@@ -1930,7 +1930,7 @@ class MySeparator extends StatelessWidget {
 
  </details>
  
-<br />
+
  
 ## # Loading
  
@@ -1994,7 +1994,7 @@ CachedNetworkImage(
   
  </details>
  
-<br />
+
  
 ## # Introduction / Onboarding Pages
 
@@ -2016,7 +2016,7 @@ CachedNetworkImage(
 
  </details>
 
-<br />
+
  
 ## # Splash Splash
  
@@ -2069,7 +2069,7 @@ CachedNetworkImage(
   
  </details>
  
- <br />
+ 
  
  ## # Gridview
 
@@ -2119,7 +2119,7 @@ GridView.builder(
  
  </details>
  
- <br />
+ 
  
  ## # Rating & Review
  
@@ -2479,7 +2479,7 @@ GridView.builder(
    
   </details>
 
-<br />
+
  
  ## # Responsive
   
@@ -2516,7 +2516,7 @@ radius .r
  
   </details>
   
-<br />
+
 
  
  ## # Git Template Title
@@ -2532,4 +2532,4 @@ radius .r
  
 </details>
 
-<br />
+
