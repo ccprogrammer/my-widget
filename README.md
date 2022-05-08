@@ -256,6 +256,72 @@ PreferredSizeWidget _buildAppBar() {
  
  </details>
  
+ ### 	• Flexible AppBar
+![image](https://user-images.githubusercontent.com/90954993/167287318-d357494d-7022-4a01-9c0a-6ef70d1602f5.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+    PreferredSizeWidget header() {
+      return AppBar(
+        backgroundColor: backgroundColor1,
+        automaticallyImplyLeading: false,
+        elevation: 0,
+        flexibleSpace: SafeArea(
+          child: Container(
+            padding: EdgeInsets.all(defaultMargin),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/images/image_profile.png',
+                  width: 64,
+                ),
+                SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Hallo, Lubi ',
+                        style: primaryTextStyle.copyWith(
+                          fontWeight: semiBold,
+                          fontSize: 24,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                      Text(
+                        '@lubiancaaa',
+                        style: subtitleTextStyle.copyWith(
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(width: 15),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                        context, '/sign-in', (route) => false);
+                  },
+                  child: Image.asset(
+                    'assets/images/button_exit.png',
+                    width: 20,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
+```
+ 
+</details>
+ 
 </details>
 
 
