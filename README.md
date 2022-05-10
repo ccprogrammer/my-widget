@@ -2588,11 +2588,45 @@ radius .r
  
   </details>
   
+  ## # Image
+  
+<details>
+ <summary> View Widget </summary>
+ 
+### 	• Circle Image
+ 
+![image](https://user-images.githubusercontent.com/90954993/167569995-de1145ec-6378-4ccf-a871-a47fdca91ddf.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+ Container(
+            width: 62,
+            height: 62,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: NetworkImage(Const.dummyImage),
+                fit: BoxFit.cover,
+              ),
+              color: Colors.white,
+              shape: BoxShape.circle,
+            ),
+          ),
+```
+ 
+</details>
+ 
+</details>
+  
 
 
  
  ## # Git Template Title
-
+  
+<details>
+ <summary> View Widget </summary>
+ 
 ### 	• Git Template Widget
 
 <details>
@@ -2603,5 +2637,6 @@ radius .r
 ```
  
 </details>
-
+ 
+</details>
 
