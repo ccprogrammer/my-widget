@@ -89,6 +89,7 @@ TextButton(
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,            
               ),
+ or just wrap the column with expanded 
  
   if using Row
   Expanded(
