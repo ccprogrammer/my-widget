@@ -799,6 +799,39 @@ Container(
 ```
  
 </details>
+ 
+ ### 	• Card with stretch header image, [StackOverflow](https://stackoverflow.com/questions/54885879/flutter-how-to-handle-image-with-fixed-size-inside-box)
+![image](https://user-images.githubusercontent.com/90954993/167739655-9d511126-db40-4976-b4d5-26e68555e40d.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,  // add this
+                children: <Widget>[
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8.0),
+                      topRight: Radius.circular(8.0),
+                    ),
+                    child: Image.network(
+                        'https://placeimg.com/640/480/any',
+                       // width: 300,
+                        height: 150,
+                        fit:BoxFit.fill
+
+                    ),
+                  ),
+                  ListTile(
+                    title: Text('Pub 1'),
+                    subtitle: Text('Location 1'),
+                  ),
+                ],
+              ),
+```
+ 
+</details>
 
 ### 	• Review Card
 ![image](https://user-images.githubusercontent.com/90954993/165220946-6c16fbc2-6f51-45fb-9e89-5b7720927bed.png)
