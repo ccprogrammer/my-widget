@@ -1850,16 +1850,21 @@ int _current = 0;
  
 ```
 
+import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
+
 class ExpandableText extends StatefulWidget {
   const ExpandableText(
     this.text, {
-    Key key,
+    Key? key,
     this.trimLines = 2,
+    this.style,
   })  : assert(text != null),
         super(key: key);
 
   final String text;
   final int trimLines;
+  final TextStyle? style;
 
   @override
   ExpandableTextState createState() => ExpandableTextState();
@@ -1907,7 +1912,7 @@ class ExpandableTextState extends State<ExpandableText> {
         textPainter.layout(minWidth: constraints.minWidth, maxWidth: maxWidth);
         final textSize = textPainter.size;
         // Get the endIndex of data
-        int endIndex;
+        int? endIndex;
         final pos = textPainter.getPositionForOffset(Offset(
           textSize.width - linkSize.width,
           textSize.height,
@@ -1917,9 +1922,10 @@ class ExpandableTextState extends State<ExpandableText> {
         if (textPainter.didExceedMaxLines) {
           textSpan = TextSpan(
             text: _readMore ? widget.text.substring(0, endIndex) : widget.text,
-            style: TextStyle(
-              color: widgetColor,
-            ),
+            style: widget.style ??
+                TextStyle(
+                  color: widgetColor,
+                ),
             children: <TextSpan>[link],
           );
         } else {
