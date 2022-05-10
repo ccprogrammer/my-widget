@@ -77,6 +77,24 @@ TextButton(
  
  </details>
  
+### • [Shimmer](https://pub.dev/packages/shimmer)
+<details>
+ <summary>View Code</summary>
+ 
+ ```
+Shimmer.fromColors(
+                baseColor: Colors.grey[500]!,
+                highlightColor: Colors.grey[300]!,
+                child: Container(
+                  color: Colors.grey,
+                  height: 250.h,
+                  width: 164.w,
+                ),
+              ),
+```
+ 
+ </details>
+ 
 ### 	• Text Expand to bottom
 
 <details>
