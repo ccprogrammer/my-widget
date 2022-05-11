@@ -77,23 +77,6 @@ TextButton(
  
  </details>
  
-### • [Shimmer](https://pub.dev/packages/shimmer)
-<details>
- <summary>View Code</summary>
- 
- ```
-Shimmer.fromColors(
-                baseColor: Colors.grey[500]!,
-                highlightColor: Colors.grey[300]!,
-                child: Container(
-                  color: Colors.grey,
-                  height: 250.h,
-                  width: 164.w,
-                ),
-              ),
-```
- 
- </details>
  
 ### 	• Text Expand to bottom
 
@@ -2077,7 +2060,8 @@ class MySeparator extends StatelessWidget {
  <details>
   <summary>View Widget</summary>
 
-### 	• Shimmer
+
+### 	• [Shimmer](https://pub.dev/packages/shimmer)
 ![image](https://user-images.githubusercontent.com/90954993/163972609-25cd4374-9059-42af-ae8c-095af92715e6.png)
 
 <details>
@@ -2085,17 +2069,14 @@ class MySeparator extends StatelessWidget {
  
 ```
 Shimmer.fromColors(
-        baseColor: Colors.grey[300],
-        highlightColor: Colors.grey[100],
-        child: Container(
-          height: height * 0.22,
-          margin: EdgeInsets.fromLTRB(24, 20, 24, 0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.grey,
-          ),
-        ),
-      );
+                baseColor: Colors.grey[500]!,
+                highlightColor: Colors.grey[300]!,
+                child: Container(
+                  color: Colors.grey,
+                  height: 250,
+                  width: 164,
+                ),
+              );
 ```
  
 </details>
