@@ -149,6 +149,7 @@ boxShadow: [
      blurRadius: 10,
      offset: Offset(0, 0), // changes position of shadow
    )
+]
 ```
 </details>
  
