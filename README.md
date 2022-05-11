@@ -2140,9 +2140,7 @@ CachedNetworkImage(
 <details>
  <summary> View Code </summary>
  
-```
-
-```
+[Loading Overlay](https://github.com/ccprogrammer/my-widget/blob/main/Bulk%20Widget/loading_overlay.dart)
  
 </details>
   
