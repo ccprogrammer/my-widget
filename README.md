@@ -2132,6 +2132,20 @@ CachedNetworkImage(
  
 </details>
   
+ 
+### 	• Loading Overlay
+
+![image](https://user-images.githubusercontent.com/90954993/167959516-41fbc5ee-78e4-439a-9407-0ecd35698765.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+```
+ 
+</details>
+  
  </details>
  
 
