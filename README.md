@@ -1975,13 +1975,14 @@ class ExpandableTextState extends State<ExpandableText> {
             text: _readMore ? widget.text.substring(0, endIndex) : widget.text,
             style: widget.style ??
                 TextStyle(
-                  color: widgetColor,
+                  color: widgetColor,                  
                 ),
             children: <TextSpan>[link],
           );
         } else {
           textSpan = TextSpan(
             text: widget.text,
+            style: widget.style ?? null,
           );
         }
         return RichText(
