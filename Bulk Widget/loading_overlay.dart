@@ -54,7 +54,7 @@ class LoadingOverlayWidget extends StatelessWidget {
             valueColor: AlwaysStoppedAnimation(Colors.red),
           ),
           SizedBox(width: 10),
-          Text(label != null && label != '' ? label : 'Mohon Tunggu ...', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Colors.black),)
+          Text(label != null && label != '' ? label : 'Loading ...', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w500, color: Colors.black),)
         ],
       ),
     );
