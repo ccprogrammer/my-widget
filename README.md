@@ -2081,6 +2081,17 @@ Shimmer.fromColors(
 ```
  
 </details>
+  
+  ### 	• Skeleton
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+
+```
+ 
+</details>
  
 ### 	• Cached Image Network
 Image loading waiting data from url
