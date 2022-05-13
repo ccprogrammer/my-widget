@@ -1202,7 +1202,7 @@ Widget _buildLocationMap() {
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w800,
-                  color: Constants.redTheme,
+                  color: Colors.blue,
                 ),
               ),
             ),
