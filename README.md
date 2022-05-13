@@ -1320,7 +1320,7 @@ Widget _buildLocationMap() {
                               TextSpan(
                                 text: '5.0',
                                 style: TextStyle(
-                                  color: Constants.redonesmile,
+                                  color: Colors.blue,
                                   fontSize: 15,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -1328,7 +1328,7 @@ Widget _buildLocationMap() {
                               TextSpan(
                                 text: '/5',
                                 style: TextStyle(
-                                  color: Constants.redonesmile,
+                                  color: Colors.blue,
                                   fontSize: 12,
                                 ),
                               ),
