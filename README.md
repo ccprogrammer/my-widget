@@ -2070,10 +2070,10 @@ class MySeparator extends StatelessWidget {
  
 ```
 Shimmer.fromColors(
-                baseColor: Colors.grey[500]!,
-                highlightColor: Colors.grey[300]!,
+                baseColor: Colors.grey[400]!,
+                highlightColor: Colors.grey[200]!,
                 child: Container(
-                  color: Colors.grey,
+                  color: Colors.black.withOpacity(0.4),
                   height: 250,
                   width: 164,
                 ),
