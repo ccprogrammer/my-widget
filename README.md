@@ -2155,6 +2155,71 @@ class CircleSkeleton extends StatelessWidget {
 ```
  
 </details>
+  
+  ### 	• Shimmer Tile
+![image](https://user-images.githubusercontent.com/90954993/168413763-33f53828-0501-4b75-925a-773ae6a3d5e1.png)
+
+<details>
+ <summary> View Code </summary>
+ 
+```
+import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
+import 'skeleton.dart';
+
+class ShimmerTile extends StatelessWidget {
+  const ShimmerTile({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: Colors.grey[500]!,
+      highlightColor: Colors.grey[300]!,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Skeleton(
+              height: 84,
+              width: 84,
+              radius: 6,
+            ),
+            SizedBox(width: 16),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Skeleton(
+                    height: 16,
+                    radius: 2,
+                  ),
+                  SizedBox(height: 8),
+                  Skeleton(
+                    height: 16,
+                    radius: 2,
+                  ),
+                  SizedBox(height: 8),
+                  Skeleton(
+                    height: 16,
+                    width: 120,
+                    radius: 2,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+```
+ 
+</details>
  
 ### 	• Cached Image Network
 Image loading waiting data from url
