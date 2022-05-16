@@ -265,7 +265,7 @@ PreferredSizeWidget _buildAppBar() {
                   icon: Icon(
                     Icons.filter_list,
                   ),
-                )    
+                ),    
           SizedBox(width: 12),
         ],
       ),
