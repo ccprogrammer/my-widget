@@ -178,8 +178,6 @@ PreferredSizeWidget _buildAppBar() {
       titleSpacing: 0,
       automaticallyImplyLeading: false,
       leading: IconButton(
-        padding: EdgeInsets.zero,
-        constraints: BoxConstraints(),
         onPressed: () {
           Navigator.pop(context);
         },
